@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+          Notification complete
+        </h1>
+        <p class="font-large">
+          Your reference number is your National Insurance number
+        </p>
+      </div>
+
+      <p>
+        You will need to quote your National Insurance number if you contact us in the future.
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>We will verify the information you have given us is correct. If we need more information 
+        from you, we will be in touch.</p>
+      <p>When we have completed our process, we will send you a confirmation email and a letter.</p>
+      <h2 class="heading-medium">Your benefits</h2>
+      <p>You may be entitled to other benefits, like Bereavement Support Payment etc</p>
+
+      <form method="post" autocomplete="off">
+        <div class="form-group">
+          <a class="button" href="signposting" role="button">Find out more</a>
+        </div>
+      </form>
+
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+    </div>
+  
+ 
+  </div>
+
+</main>
+
+{% endblock %}

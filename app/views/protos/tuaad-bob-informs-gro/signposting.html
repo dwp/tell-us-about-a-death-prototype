@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">Government has now been informed about the death</h1>
+
+        <p class="lede">
+          If any more information is needed, you [spouse, partner, or the person dealing with the
+          estate] will be contacted.
+        </p>
+
+        <h2 class="heading-medium">Things you can do now</h2>
+
+        <table class="check-your-answers">
+          <thead>
+            <tr>
+              <th colspan="3">
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+              <tr>
+                  <td>
+                    Bereavement Support Payment
+                  </td>
+                  <td>
+                    Apply ...
+                  </td>
+                  <td>
+                    <a class="form-label-bold" href="#">Apply online</a>
+                  </td>
+                </tr>
+            
+
+            
+              <tr>
+                <td>
+                  Get help paying for a funeral
+                </td>
+                <td>
+                  Apply within 3 months of the funeral
+                </td>
+                <td>
+                  <a class="form-label-bold" href="#">Apply online</a>
+                </td>
+              </tr>
+            
+
+            
+              <tr>
+                <td>
+                  Work out Inheritance Tax bill
+                </td>
+                <td>
+                  This needs to be paid within 6 months of the death
+                </td>
+                <td>
+                  <a href="#" class="form-label-bold" href="#">Calculate online</a>
+                </td>
+              </tr>
+            
+              <tr>
+                  <td>
+                    Contact commercial entities
+                  </td>
+                  <td>
+                    Get help notifying commerical organisations like banks and utility companies. This is 
+                    not a government service.
+                  </td>
+                  <td>
+                    <a href="#" class="form-label-bold" href="#">Visit the Bereavement Advice Centre</a>
+                  </td>
+                </tr>
+
+
+
+          </tbody>
+        </table>
+
+        <br />
+
+       <form method="post" autocomplete="off">
+        <div class="form-group">
+            <a class="button" href="start" role="button">Finished</a>
+        </div>
+      </form>
+      </div>
+    </div>
+  
+</main>
+
+{% endblock %}

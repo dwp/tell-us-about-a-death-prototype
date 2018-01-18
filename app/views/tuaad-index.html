@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  <h class="heading-small"></h>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Project: Tell us about a death</h1>
+      <p class="lede">Prototypes of the Citizen's process;</p>
+      <ol class="list list-number"> 
+        <!--  <li>NINO as URN</li>
+          <ul class="list list-bullet">
+              <li><a href="protos/urn/urn-p1">one check and completion page (no signposting)</a></li>
+              <li> <a href="protos/urn-plus/urnplus-p1">each stage check and completion page (no signposting)</a></li>
+            </ul> -->
+
+           <li>Bob's journey</li>
+            <ul class="list list-bullet">
+              <li><a href="protos/tuaad-bob-informs-gro/start">Version 1 &ndash; GRO feed</a></li>
+              <li><a href="protos/tuaad-bob-informs/start">Version 2 &ndash; no GRO feed</a></li>
+              <li><a href="protos/tuaad-pds-informs/start">Version 3 &ndash; PDS feed</a></li>
+            </ul>
+
+            <li>Edit/add services</li>
+            <ul class="list list-bullet">
+              <li><a href="protos/tuaad-edit-services/edit-orgs-v1">Version 1</a></li>
+              <li><a href="protos/tuaad-edit-services/edit-orgs-v2">Version 2</a></li>
+             <!-- <li><a href="protos/tuaad-edit-services/edit-orgs-v3">Version 3</a></li>-->
+            </ul>
+          
+       <!--   <li>Signposting of other services;</li> 
+            <ul class="list list-bullet">
+              <li><a href="protos/signposting/dns-signpost-v1">bottom of page</a></li>
+              <li><a href="protos/signposting/dns-signpost-v2">right column</a></li>
+              <li><a href="protos/signposting/dns-signpost-v3">separate page</a></li>
+            </ul>  
+            
+            <li>Fail points</li>
+            <ul class="list list-bullet">
+              <li><a href="">incorrect input</a></li>
+              <li><a href="">misplaced Ref #</a></li>
+            </ul> -->
+      </ol>
+     
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}

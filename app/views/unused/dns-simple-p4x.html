@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Tell us about a death</h1>
+      <p class="lede">Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+      <p>You have input AB 12 34 56 Z and our records show that this is Jane Bloggs.</p>
+      <form action="dns-simple-p5.html" >
+          <div class="form-group">
+              <fieldset class="inline">
+          
+                <legend>
+                  <h1 class="heading-medium">
+                    Is this correct?
+                  </h1>
+                </legend>
+          
+                <div class="multiple-choice">
+                  <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+                  <label for="radio-inline-1">Yes</label>
+                </div>
+                <div class="multiple-choice">
+                  <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+                  <label for="radio-inline-2">No</label>
+                </div>
+                
+              </fieldset>
+            </div>
+            <input class="button" type="submit" value="Continue">
+        </form>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">
+          Notification complete
+        </h1>
+        <p class="font-large">
+          Your reference number is <br>
+          <strong class="bold">HDJ2123F</strong>
+        </p>
+      </div>
+
+      <p>
+        Please make a note of your reference number. You will need it if you need to contact us in the future.
+      </p>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>We need to verify the information you have given us is correct. If we need more information from you, we will be in touch.</p>
+      <p>When we have completed our process, we will send you a confirmation email and a letter.</p>
+      <h2 class="heading-medium">You may be entitled to benefits</h2>
+      <p>According to the information you have given us, you may be entitled to the following benefits;</p>
+        <ul class="list list-bullet">
+          <li><a href="#">Bereavement Support Payment</a></li>
+          <li><a href="#">Child Benefit</a></li>
+          <li><a href="#">Child Tax Credit</a></li>
+        </ul>
+        <h2 class="heading-medium">Tell us what you think</h2>
+      <p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>
+     
+   
+    </div>
+  
+ 
+  </div>
+
+</main>
+
+{% endblock %}

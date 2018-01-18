@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Tell us about a death</h1>
+      <p class="lede">Use this service to inform us of a death so that we can stop any payments due to them, and also cancel any passports or driving licences, etc.</p>
+      
+      
+      <h2 class="heading-medium">How it works</h2>
+      <p>Faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam quis risus eget urna mollis ornare vel eu leo. Nulla vitae elit libero, a pharetra augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur blandit tempus porttitor. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+
+
+      <h2 class="heading-medium">Which agencies are involved?</h2>
+      <p>Where relevant, this service will inform the following services so that you don't have to;</p>
+      <ul class="list list-bullet"> 
+          <li>Child Benefit</li>
+          <li>Child Tax Credits</li>
+          <li>Civil Service Pensions</li>
+          <li>DVLA</li>
+          <li>DWP</li>
+          <li>HMRC</li>
+          <li>War Pensions</li>
+          <li>etc</li>
+      </ul>
+
+
+
+
+      <div class="panel panel-border-wide">
+          <p>
+            Please note that depending on the agencies involved, it can take up to XX weeks to complete the process.
+          </p>
+      </div>
+
+      <h2 class="heading-medium">What information will we need from you?</h2>
+      <p>We just need;</p>
+      <ul class="list list-bullet">
+          <li>The deceased's National Insurance number</li>
+          <li>Your National Insurance number</li>
+      </ul>
+      <p>The process should take XX minutes.</p>
+
+      <a class="button button-start" href="urnplus-p2" role="button">Start now</a>
+    </div>
+  
+</main>
+
+{% endblock %}

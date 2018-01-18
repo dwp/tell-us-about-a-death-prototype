@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">The deceased</h1>
+
+      <p class="lede">Please provide the following information about the deceased;</p>
+      <!-- <p>[See <a href="https://govuk-elements.herokuapp.com/form-elements/">GOV.UK Elements</a> for examples]</p> -->
+
+      
+          <form>
+              <div class="form-group">
+            <label class="form-label" for="ni-number">National Insurance number
+            <span class="form-hint"> It's on their National Insurance card, benefit letter, payslip or P60.
+            <br>For example, ‘QQ 12 34 56 C’.</span>
+            </label>
+            <input class="form-control" id="ni-number" type="text" name="ni-number">
+            </div>
+            <div class="form-group">
+                <a href="urn-p3" class="button">Continue</a>
+              </div>
+          </form>
+      </div>
+
+ 
+  </div>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}

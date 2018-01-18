@@ -1,0 +1,114 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+  <div class="grid-row">
+    <div class="column-two-thirds">
+        <h1 class="heading-large">Check your information before proceeding</h1>
+    
+    
+          <!-- only add a heading for a list if there is more than one list -->
+          <h2 class="heading-medium">Your details</h2>
+    
+          <!-- use additional modifier class to change column widths for multiple groups of questions and answers: -->
+          <!--   * `cya-questions-short` for short questions -->
+          <!--   * `cya-questions-long` for long questions -->
+          <!--   * none for single group of q&a -->
+          <dl class="govuk-check-your-answers cya-questions-short">
+            <div>
+              <dt class="cya-question">
+                NI Number
+              </dt>
+              <dd class="cya-answer">
+                PP 12 34 56 D
+              </dd>
+              <dd class="cya-change">
+                <a href="#">
+                  Change<span class="visually-hidden"> date of birth</span>
+                </a>
+              </dd>
+            </div>
+            
+            <div>
+              <dt class="cya-question">
+                Name
+              </dt>
+              <dd class="cya-answer">
+                Jane Doe
+              </dd>
+              <dd class="cya-change">
+                <!--<a href="#">
+                  Change<span class="visually-hidden"> name</span>
+                </a>-->
+              </dd>
+            </div>
+
+            <div>
+              <dt class="cya-question">
+                NI Number
+              </dt>
+              <dd class="cya-answer">
+                PP 12 34 56 D
+              </dd>
+              <dd class="cya-change">
+               <!-- <a href="#">
+                  Change<span class="visually-hidden"> date of birth</span>
+                </a>-->
+              </dd>
+            </div>
+    
+            <div>
+              <dt class="cya-question">
+                Date of birth
+              </dt>
+              <dd class="cya-answer">
+                5 January 1954
+              </dd>
+              <dd class="cya-change">
+                <!--<a href="#">
+                  Change<span class="visually-hidden"> date of birth</span>
+                </a>-->
+              </dd>
+            </div>
+    
+            <div>
+              <dt class="cya-question">
+                Home address
+              </dt>
+              <dd class="cya-answer">
+                72 Guild Street<br />
+                London<br />
+                SE23 6FH
+              </dd>
+              <dd class="cya-change">
+               <!-- <a href="#">
+                  Change<span class="visually-hidden"> home address</span>
+                </a>-->
+              </dd>
+            </div>
+    
+          </dl>
+    
+          <h2 class="heading-medium">Please take a moment to review the information above</h2>
+    
+          <p class="text">
+            By submitting this notification you are confirming that, to the best of your knowledge, the details you are providing are correct.
+          </p>
+    
+          <div class="form-group">
+            <a href="urnplus-p6" class="button">Accept and continue</a>
+          </div>
+    
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}

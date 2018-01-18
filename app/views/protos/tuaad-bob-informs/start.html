@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Tell us about a death</h1>
+      <p class="lede">When someone dies, any allowances or benefits they received will need to be cancelled.</p>
+      <p>As soon as you can, you'll need to give some details about the person who has died. This will help to prevent overpayment of any benefits they received and fraudulent use of their identity.</p>
+      <p>You'll be able to see what will change before you confirm you are ready to pass this information on.</p>
+
+      <details>
+        <summary><span class="summary">See which government agencies are involved</span></summary>
+          <div class="panel panel-border-narrow">
+        
+              <ul class="list list-bullet"> 
+                  <li>Child Benefit</li>
+                  <li>Child Tax Credits</li>
+                  <li>Civil Service Pensions</li>
+                  <li>DVLA</li>
+                  <li>DWP</li>
+                  <li>HMRC</li>
+                  <li>Passport Office</li>
+                  <li>War Pensions</li>
+              </ul>
+        
+          </div>
+        </details>
+
+       <h2 class="heading-medium">How it works</h2>
+
+        <p>You'll be asked for some personal details and about your relationship to the person who died. This is so we can have a record of
+          who we can follow up with if we have any questions and who to notify when all departments have completed our activity.</p>   
+
+      <h2 class="heading-medium">What you'll need</h2>
+      <ul class="list list-bullet">
+          <li>The National Insurance number or the date of birth of the person who died</li>
+          <li>The date they died</li>
+          <li>The contact details of the person dealing with the estate, if you're giving this information on their behalf</li>
+      </ul>
+
+      <a class="button button-start" href="details-deceased" role="button">Start now</a>
+    </div>
+  
+</main>
+
+{% endblock %}

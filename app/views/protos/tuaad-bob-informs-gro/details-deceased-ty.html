@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">About the person who died</h1>
+<!--
+      <div class="notice" style="margin-top:50px">
+          <i class="icon icon-important">
+            <span class="visually-hidden">Please note</span>
+          </i>
+          <strong class="bold-small">
+              We have no record of this death in our system.
+          </strong>
+        </div>
+
+      -->
+
+      <p class="lede">Thank you.</p>
+
+      <p>We have already received official confirmation of the death and we have
+        notified all relevant government departments.</p>
+
+      <p>If you would like to receive notification when we have cancelled services,
+          we will need some information from you.</p>
+
+    
+  <form>
+    <div class="form-group"><!--
+      <label class="form-label" for="file-input">
+        <legend><h2 class="heading-medium"> Upload Medical Certificate</h2></legend>
+      </label>
+        <input type="file" id="file-input">-->
+    </div>
+    <a class="button" href="details-notifier" role="button">Continue</a>
+  </form>
+
+</div>
+</div>
+  
+</main>
+
+{% endblock %}

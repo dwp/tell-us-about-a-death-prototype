@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %} 
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Review the information you provided</h1>
+      <p class="lede">You have provided details about the death of [Personalised].</p>
+      <p>The following table assumes that we can build the list from data held in 
+      other departmental systems as well as our own. Assumes BAU practices of other 
+      depts features 'suspend' functionality.</p>
+          
+      <p>Because 'Bob' has informed us, we can only list these services as 'suspended'
+      or pending adjustment.</p>
+        
+      <table>
+        <caption class="heading-medium">The following changes will be made:</caption>
+        <thead>
+          <tr>
+            <td class="heading-small">What will change</td>
+            <td class="heading-small">How it will change</td>
+          </tr>
+        </thead>
+          <tbody>
+          <tr>
+            <td>State Pension</td>
+            <td>Payments will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td>Pension Credit</td>
+            <td>Payments will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td>Carer's Allowance</td>
+            <td>The underlying entitlement will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td> Housing Benefit </td>
+              <td>When we receive official confirmation of death, this will be adjusted</td>
+          </tr>
+          <tr>
+            <td>Council Tax</td>
+            <td>When we receive official confirmation of death, this will be adjusted</td>
+          </tr>
+          <tr>
+            <td>Attendance Allowance</td>
+            <td>Payments will be suspended pending cancellation</td>
+          </tr>
+          <!-- <tr>
+            <td>Passport</td>
+            <td>This will be suspended pending cancellation to prevent fraudulent use</td>
+          </tr>
+          <tr>
+            <td>Driving licence</td>
+            <td>This will be suspended pending cancellation to prevent fraudulent use</td>
+          </tr>-->
+          <tr>
+            <td>Blue Badge</td>
+            <td>This will be suspended pending cancellation to prevent fraudulent use</td>
+          </tr>
+          <tr>
+            <td>Council housing</td>
+            <td>When we receive official confirmation of death, the council will contact the
+              person dealing with the affairs of [Personalised] to let them know how the tenancy will change</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+          <caption class="heading-medium">Have we missed something?</caption>
+          <tr>
+            <th class="heading-small">Service name</th>
+            <th class="heading-small">Add service</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>DVLA</th>
+            <td><a href="#">Add</a></td>
+          </tr>
+          <tr>
+            <th>Passport office</th>
+            <td><a href="#">Add</a></td>
+          </tr>
+          <tr>
+            <th>War pension</th>
+            <td><a href="#">Add</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="notice" style="margin-top:50px; margin-bottom:50px">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Please note</span>
+        </i>
+        <strong class="bold-small">By adding this information you understand that government organisations
+        will make necessary changes to any benefits and services that may have been received by [Personalised].
+        </strong>
+      </div>
+
+      <form method="post" autocomplete="off">
+        <div class="form-group">
+            <a class="button" href="#" role="button">I understand &ndash; continue</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}
