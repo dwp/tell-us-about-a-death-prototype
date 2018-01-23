@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Your contact details</h1>
+      <p class="lede">Please provide some contact details so we can get in touch if we have 
+        any further questions and send a confirmation letter when we're done.</p>
+      <div class="form-group">
+          <legend>
+            <h2 class="heading-medium">What is your address?</h2>
+          </legend>
+            <p class="form-hint">Notification of any changes to services will be sent here</p>
+
+        <form method="post" autocomplete="off">
+          <div class="form-group">
+            <legend class="form-label">Address</legend>
+
+            <fieldset>
+              <div class="form-group-compound">
+                <label class="form-label label-no-hint visuallyhidden" for="address">
+                  Address line 1
+                </label>
+                <input type="text" class="form-control" id="address-1">
+              </div>
+            </fieldset>
+
+            <div class="form-group-compound">
+              <label class="form-label label-no-hint visuallyhidden" for="address">
+                Address line 2
+              </label>
+              <input type="text" class="form-control" id="address-2">
+            </div>
+
+            <div>
+              <label class="form-label label-no-hint visuallyhidden" for="address">
+                Address line 3
+              </label>
+              <input type="text" class="form-control" id="address-3">
+            </div>
+          </div>
+
+          <fieldset>
+            <div class="form-group">
+              <label class="form-label label-no-hint" for="postcode">
+                Postcode
+              </label>
+              <input type="text" class="form-control" id="postcode">
+            </div>
+          </fieldset>
+
+          <h2 class="heading-medium">If we have any questions, how should we contact you?</h2>
+
+          <p>Select as many as you like</p>
+
+          <fieldset>
+            <div class="form-group">
+                <div class="multiple-choice">
+                    <input id="ccontact-method" name="nationalities" type="checkbox" value="Post">
+                    <label for="contact-method">Post</label>
+                  </div>
+
+                  <div class="multiple-choice" data-target="phone">
+                      <input id="ccontact-method" name="nationalities" type="checkbox" value="Phonecall">
+                      <label for="contact-method">Phonecall</label>
+                    </div>
+                    <div class="panel panel-border-narrow js-hidden" id="phone">
+                      <label class="form-label" for="phone">Phone number</label>
+                      <input class="form-control" type="text" id="phone" name="phone">
+                    </div>
+              
+                    <div class="multiple-choice" data-target="sms">
+                        <input id="ccontact-method" name="nationalities" type="checkbox" value="SMS">
+                        <label for="contact-method">Text message</label>
+                      </div>
+                      <div class="panel panel-border-narrow js-hidden" id="sms">
+                        <label class="form-label" for="sms">Mobile number</label>
+                        <input class="form-control" type="text" id="phone" name="sms">
+                      </div>
+
+                      <div class="multiple-choice" data-target="email">
+                          <input id="ccontact-method" name="nationalities" type="checkbox" value="Email">
+                          <label for="contact-method">Email</label>
+                        </div>
+                        <div class="panel panel-border-narrow js-hidden" id="email">
+                          <label class="form-label" for="email">Email address</label>
+                          <input class="form-control" type="text" id="phone" name="email">
+                        </div>
+
+            </div>
+
+          </fieldset>
+          <a class="button" href="inform-orgs" role="button">Continue</a>
+        </form></div>
+     
+    </div>
+    </div>
+  
+</main>
+
+{% endblock %}
