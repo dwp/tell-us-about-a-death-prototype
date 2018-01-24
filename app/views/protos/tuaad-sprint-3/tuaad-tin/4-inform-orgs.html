@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Information you have provided</h1>
+      <p class="lede">You have told us about the death of {{data['first-name-2']}} {{data['last-name-2']}}.</p>
+      <p>When you are ready, click on the green button to confirm. We will suspend all 
+      relevant services pending official confirmation of the death.</p>
+      <div class="notice" style="margin-top:50px; margin-bottom:50px">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Please note</span>
+        </i>
+        <strong class="bold-small">By sending this information you understand that
+        government organisations will make necessary changes to any benefits and 
+        services that may have been received by {{data['first-name-2']}} {{data['last-name-2']}}.</strong>
+      </div>
+      <form method="post" autocomplete="off">
+        <div class="form-group">
+          <a class="button" href="5a-complete" role="button">I understand &ndash; continue</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}
