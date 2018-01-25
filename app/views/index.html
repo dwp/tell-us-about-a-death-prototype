@@ -1,61 +1,193 @@
-{% extends "layout.html" %}
+{% extends "layout-index.html" %}
 
 {% block page_title %}
   GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
+<div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="heading-xlarge">
+      {{serviceName}}
+      <span>Prototypes</span>
+    </h1>
+  </div>
+</div>
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        The GOV.UK prototype kit
-        <span class="heading-secondary">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+			{# Start of most recent box #}
+      <div class="most-recent">
 
-      <h2 class="heading-medium">About this page</h2>
+				{# Start of prototype write up #}
+				<div class="prototype-write-up">
+					<div class="grid-row">
+						<div class="column-one-third">
+							<dl>
+								<dt class="heading-small">Date of release</dt>
+								<dd>1 January 2018</dd>
+							</dl>
+						</div>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+						<div class="column-one-third">
+							<dl>
+								<dt class="heading-small">Feature</dt>
+								<dd>Payment details</dd>
+							</dl>
+						</div>
 
-			<h2 class="heading-medium">Examples and documentation</h2>
+						<div class="column-one-third">
+							<dl>
+								<dt class="heading-small">Related stories</dt>
+								<dd>JIRA-123</dd>
+							</dl>
+						</div>
+					</div>
 
-			<ul class="list list-bullet">
-				<li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit">GitHub</a></li>
-			</ul>
+					<h3 class="heading-small">Changes</h3>
+					<p>
+						In this version, we added the option to pay into a building society 
+						account, on the payment details page.
+					</p>
 
-      <h2 class="heading-medium">Other resources</h2>
 
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
+					<h3 class="heading-small">Hypothesis</h3>
+					<p>
+						If we add the ability to pay into building society accounts, 
+						then we will see an increase in successful claims and a reduction in complaints, 
+						because users with building society accounts will be able to complete the online journey.
+					</p>
 
-    </div>
+
+					<h3 class="heading-small">Research notes</h3>
+					<p>
+						Users did not see the button to switch to a building society account.
+					</p>
+					<p>
+						When asked what they would do next, 3 out of 4 users said they would 
+						phone up to complete their claim.
+					</p>
+					<p>
+						More work is needed to improve the design of this feature.
+					</p>
+
+					<a href="/link-to-prototype" class="button button-start">View prototype</a>
+				</div>
+				{# End of prototype write up #}
+
+			</div>
+			{# End of most recent box #}
+
+
+      <h2 class="heading-large">All versions</h2>
+			{# Start of hidden panel #}
+			<details>
+				<summary><span class="summary">Show all versions</span></summary>
+				<div class="panel panel-border-narrow">
+					
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>14 December 2017</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Feature</dt>
+									<dd>Eligibility knockout</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd>JIRA-122</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3 class="heading-small">Changes</h3>
+						<p>
+							...
+						</p>
+
+
+						<h3 class="heading-small">Hypothesis</h3>
+						<p>
+							If... then... because.
+						</p>
+
+
+						<h3 class="heading-small">Research notes</h3>
+						<p>
+							...
+						</p>
+
+						<a href="/link-to-prototype" class="button button-start">View prototype</a>
+					</div>
+					{# End of prototype write up #}
+					
+					<hr />
+
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>1 December 2017</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Feature</dt>
+									<dd>Payment details</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd>JIRA-121</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3 class="heading-small">Changes</h3>
+						<p>
+							...
+						</p>
+
+
+						<h3 class="heading-small">Hypothesis</h3>
+						<p>
+							If... then... because.
+						</p>
+
+
+						<h3 class="heading-small">Research notes</h3>
+						<p>
+							...
+						</p>
+
+						<a href="/link-to-prototype" class="button button-start">View prototype</a>
+					</div>
+					{# End of prototype write up #}
+
+				</div>
+			</details>
+			{# End of hidden panel #}
+
+
+		</div>
   </div>
 </main>
 
