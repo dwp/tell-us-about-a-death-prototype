@@ -1,64 +1,252 @@
-{% extends "layout.html" %}
+{% extends "layout-index.html" %}
 
 {% block page_title %}
   GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
+<div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="heading-xlarge">
+      {{serviceName}}
+      <span>Prototypes</span>
+    </h1>
+  </div>
+</div>
 
 <main id="content" role="main">
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        The GOV.UK prototype kit
-        <span class="heading-secondary">{{releaseVersion}}</span>
-      </h1>{{releaseVersion | log }}
-      <p>
-        This kit lets you rapidly create HTML prototypes of GOV.UK services.
-      </p>
 
-      <p>
-        It contains all you need to prototype anything from simple static pages to complex, data-driven transactions.
-      </p>
+			{# Start of most recent box #}
+      <div class="most-recent">
 
-      <h2 class="heading-medium">About this page</h2>
+				{# Start of prototype write up #}
+				<div class="prototype-write-up">
+					<div class="grid-row">
+						<div class="column-one-third">
+							<dl>
+								<dt class="heading-small">Date of release</dt>
+								<dd>26 January 2018</dd>
+							</dl>
+						</div>
 
-      <p>We recommend you add links to your prototype to this page, rather than delete it.
-        You'll find this page in the kit at '/app/views/index.html'.</p>
-      <p>You can change the service name by editing the file '/app/config.js'.</p>
+						<div class="column-one-third">
+							<dl>
+								<dt class="heading-small">Feature</dt>
+								<dd>Working title 'Tin' end-to-end process</dd>
+							</dl>
+						</div>
 
-			<h2 class="heading-medium">Examples and documentation</h2>
+						<div class="column-one-third">
+							<dl>
+								<dt class="heading-small">Related stories</dt>
+								<dd>JIRA-xx</dd>
+							</dl>
+						</div>
+					</div>
 
-			<ul class="list list-bullet">
-				<li><a href="/docs/tutorials-and-examples">Example pages and documentation</a></li>
-				<li><a href="https://github.com/alphagov/govuk_prototype_kit">GitHub</a></li>
-			</ul>
+					<h3 class="heading-small">Changes</h3>
+					<p>
+						In this version, we created the least technical back-end version a user
+						will encounter when accessing TUAAD. Assumes no real-time inter-departmental 
+						comms - reliant on GRO-CIS comms.
+					</p>
+					<p>
+						The form-field actors are -
+						<ul class="list list-bullet">
+							<li>Alice &ndash; who will produce an immediate completion;</li>
+							<li>Jane &ndash; who will require Bob to provide more information;</li>
+							<li>Empty &ndash; who will produce an 'error' screen to show how an incorrect CIS match might be handled.</li>
+						</ul>
+					</p>
 
-      <h2 class="heading-medium">Other resources</h2>
 
-			<ul class="list list-bullet">
-				<li>
-					<a href="https://govuk-elements.herokuapp.com/snippets/">
-						Guide to GOV.UK Elements
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/service-manual">
-						Service design manual
-					</a>
-				</li>
-				<li>
-					<a href="https://www.gov.uk/design-principles">
-						Government Digital Service Design Principles
-					</a>
-				</li>
-			</ul>
+					<h3 class="heading-small">Hypothesis</h3>
+					<p>
+						...
+					</p>
 
-    </div>
+
+					<h3 class="heading-small">Research notes</h3>
+					<p>
+						Created prior to UR involvement. 
+					</p>
+
+					<a href="/protos/tuaad-sprint-3/tuaad-tin/1-start" class="button button-start">View prototype</a>
+				</div>
+				{# End of prototype write up #}
+
+			</div>
+			{# End of most recent box #}
+
+
+      <h2 class="heading-large">All versions</h2>
+			{# Start of hidden panel #}
+			<details>
+				<summary><span class="summary">Show all versions</span></summary>
+				<div class="panel panel-border-narrow">
+					
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>16 January 2018</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Feature</dt>
+									<dd>3 Routes into TUAAD</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd>JIRA-xxx</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3 class="heading-small">Changes</h3>
+						<p>
+							Prototypes to show how the screens will adapt depending on the data 
+							being fed into the system. Includes examples of GRO, PDS, and citizen 
+							feeds.
+						</p>
+						<p>
+							Also shows examples of how we might give the citizen the ability to edit 
+							the list of services.
+						</p>
+
+
+						<h3 class="heading-small">Hypothesis</h3>
+						<p>
+							That access to other department's technology will allow us to feed back to
+							the citizen in a more tailored way. And that they should have the ability to 
+							amend the list of services if they see an omission.
+						</p>
+
+
+						<h3 class="heading-small">Research notes</h3>
+						<p>
+							Created prior to UR involvement. 
+						</p>
+
+						<a href="/tuaad-index" class="button button-start">View prototypes</a>
+					</div>
+					{# End of prototype write up #}
+					
+					<hr />
+
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>22 December 2017</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Feature</dt>
+									<dd>NINO as sole identifier</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd>JIRA-xxx</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3 class="heading-small">Changes</h3>
+						<p>
+							Added more check pages to the process.
+						</p>
+
+
+						<h3 class="heading-small">Hypothesis</h3>
+						<p>
+							That citizens will want to check (and amend) information listed prior to
+							submitting.
+						</p>
+
+
+						<h3 class="heading-small">Research notes</h3>
+						<p>
+							Created prior to UR involvement. 
+						</p>
+
+						<a href="/protos/urn-plus/urnplus-p1" class="button button-start">View prototype</a>
+					</div>
+					{# End of prototype write up #}
+
+					<hr />
+
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>22 December 2017</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Feature</dt>
+									<dd>NINO as sole identifier</dd>
+								</dl>
+							</div>
+
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd>JIRA-xxx</dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3 class="heading-small">Changes</h3>
+						<p>
+							...
+						</p>
+
+
+						<h3 class="heading-small">Hypothesis</h3>
+						<p>
+							That citizens should be able to inform of a death using the minimum
+							amount of information possible (NINO).
+						</p>
+
+
+						<h3 class="heading-small">Research notes</h3>
+						<p>
+							Created prior to UR involvement. 
+						</p>
+
+						<a href="/protos/urn/urn-p1" class="button button-start">View prototype</a>
+					</div>
+					{# End of prototype write up #}
+
+				</div>
+			</details>
+			{# End of hidden panel #}
+
+
+		</div>
   </div>
 </main>
 
 {% endblock %}
-
-

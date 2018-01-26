@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  <h class="heading-small"></h>
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Project: Tell Us About A Death</h1>
+      <p class="lede">Prototypes from Sprint 3</p>
+      <p><!--Our first p-->Prototype &ndash; working title 'Tin' &ndash; shows how our basic MVP might work.</p>
+      <!--<p>Our second prototype &ndash; working title 'Gold' &ndash; shows more advanced possibilities.</p>-->
+      <ol class="list list-number">
+        <li>Tin</li>
+        <ul class="list list-bullet">
+          <li><a href="tuaad-tin/1-start">Version 1</a></li>
+          <!--<li><a href="">Version 1 &ndash; Jane</a></li>
+        </ul>
+        <li>Gold</li>
+        <ul class="list list-bullet">
+          <li><a href="">Version 1 &ndash; Alice</a></li>
+          <li><a href="">Version 1 &ndash; Jane</a></li>
+        --></ul>
+      </ol>
+
+           
+    </div>
+  </div>
+  
+</main>
+
+{% endblock %}
