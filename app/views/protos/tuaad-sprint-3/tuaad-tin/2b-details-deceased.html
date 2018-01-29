@@ -26,20 +26,24 @@ Tell us about a death
 
       <h1 class="heading-large">About the person who has died</h1>
       <form method="post" autocomplete="off">
-      <div class="form-group">
+      <div class="form-group form-group-error">
         <label class="form-label" for="first-name-2">First name</label>
+        <span class="error-message">Enter the First Name again</span>
         <input class="form-control" id="first-name-2" name="first-name-2" type="text">
       </div>
-      <div class="form-group">
+      <div class="form-group form-group-error">
         <label class="form-label" for="last-name-2">Last name</label>
+        <span class="error-message">Enter the Last Name again</span>
         <input class="form-control" id="last-name-2" name="last-name-2" type="text">
+        
       </div>
-      <div class="form-group">
+      <div class="form-group form-group-error">
         <label class="form-label" for="ni-number">
           National Insurance number
           <span class="form-hint">It's on their National Insurance card, benefit letter, payslip or P60.
           <br>For example, ‘QQ 12 34 56 C’.
           </span>
+          <span class="error-message">Enter the National Insurance number again</span>
         </label>
         <input class="form-control" id="ni-number" type="text" name="ni-number">
       </div>
