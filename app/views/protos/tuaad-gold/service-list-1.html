@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Confirmation page example
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-large">Thank you</h2>
+      <p class="lede">We have received official notification of {{data['first-name-2']}}
+        {{data['last-name-2']}}'s death from the Registrar.</p>
+      
+      <h2 class="heading-medium">What happens next</h2>
+      <p>We have informed all government and local authority departments who will cancel any benefits
+      and/or services that {{data['first-name-2']}} {{data['last-name-2']}} was entitled to.</p>
+      
+      <table>
+          <caption class="heading-medium">Government services</caption>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Action taken</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Service 1</td>
+              <td>Cancelled the deceased's entitlement.</td> 
+            </tr>
+            <tr>
+              <td>Service 2</td>
+              <td>Cancelled the deceased's entitlement.</td> 
+            </tr>
+            <tr>
+              <td>Service 3</td>
+              <td>Cancelled the deceased's entitlement.</td> 
+            </tr>
+          </tbody>
+        </table>
+
+        <table>
+          <caption class="heading-medium">Local authority services</caption>
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Action taken</th>
+            </tr>
+          </thead>
+          <tbody> 
+            <tr>
+              <td>Service 1</td>
+              <td>Cancelled the deceased's entitlement.</td> 
+            </tr>
+            <tr>
+              <td>Service 2</td>
+              <td>Cancelled the deceased's entitlement.</td> 
+            </tr>
+            <tr>
+              <td>Service 3</td>
+              <td>Cancelled the deceased's entitlement.</td> 
+            </tr>
+          </tbody>
+        </table>
+
+      <h2 class="heading-medium">Contacting us</h2>
+      <p>Each department listed above will contact you to confirm that they have taken the action outlined.</p>
+      <p>If you have not heard within 10 days, telephone 01234567890 to speak to an agent. You will be asked to confirm your identity.</p>
+      <div class="form-group">
+        <!--<p><a href="https://www.gov.uk/service-manual/user-centred-design/resources/patterns/feedback-pages.html">What did you think of this service?</a> (takes 30 seconds)</p>-->
+      </div>
+    </div>
+   </div>
+</main>
+
+{% endblock %}
