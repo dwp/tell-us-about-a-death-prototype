@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">How would you like to be contacted?</h1>
+      <p>Please provide some contact details so we can get in touch if we have 
+        any further questions and to send a confirmation when we're done.</p>
+      <div class="form-group">
+        
+         <fieldset>
+           <p class="form-hint">Choose as many as you like</p>
+
+            <div class="form-group">
+              <div class="multiple-choice" data-target="phone">
+                <input id="contact-method" name="nationalities" type="checkbox" value="Phonecall">
+                <label for="contact-method">Phonecall</label>
+              </div>
+              <div class="panel panel-border-narrow js-hidden" id="phone">
+                <label class="form-label" for="phone">Phone number</label>
+                <input class="form-control" type="text" id="phone" name="phone">
+              </div>
+              <div class="multiple-choice" data-target="sms">
+                <input id="contact-method" name="nationalities" type="checkbox" value="SMS">
+                <label for="contact-method">Text message</label>
+              </div>
+              <div class="panel panel-border-narrow js-hidden" id="sms">
+                <label class="form-label" for="sms">Mobile number</label>
+                <input class="form-control" type="text" id="phone" name="sms">
+              </div>
+              <div class="multiple-choice" data-target="email">
+                <input id="contact-method" name="nationalities" type="checkbox" value="Email">
+                <label for="contact-method">Email</label>
+              </div>
+              <div class="panel panel-border-narrow js-hidden" id="email">
+                <label class="form-label" for="email">Email address</label>
+                <input class="form-control" type="text" id="phone" name="email">
+              </div>
+            </div>
+          </fieldset>
+<!--
+          <h2 class="heading-medium">Contact details for notification of any changes to services</h2>
+          <p class="form-hint">Notification of any changes to services will be sent here &ndash; choose
+            as many as you like.
+          </p>
+          <div class="form-group">
+              <fieldset>
+                  <div class="form-group">
+                    <div class="multiple-choice">
+                      <input id="contact-method" name="nationalities" type="checkbox" value="Post">
+                      <label for="contact-method">Post</label>
+                    </div>
+                    <div class="multiple-choice" data-target="phone">
+                      <input id="ccontact-method" name="nationalities" type="checkbox" value="Phonecall">
+                      <label for="contact-method">Phonecall</label>
+                    </div>
+                    <div class="panel panel-border-narrow js-hidden" id="phone">
+                      <label class="form-label" for="phone">Phone number</label>
+                      <input class="form-control" type="text" id="phone" name="phone">
+                    </div>
+                    <div class="multiple-choice" data-target="sms">
+                      <input id="ccontact-method" name="nationalities" type="checkbox" value="SMS">
+                      <label for="contact-method">Text message</label>
+                    </div>
+                    <div class="panel panel-border-narrow js-hidden" id="sms">
+                      <label class="form-label" for="sms">Mobile number</label>
+                      <input class="form-control" type="text" id="phone" name="sms">
+                    </div>
+                    <div class="multiple-choice" data-target="email">
+                      <input id="ccontact-method" name="nationalities" type="checkbox" value="Email">
+                      <label for="contact-method">Email</label>
+                    </div>
+                    <div class="panel panel-border-narrow js-hidden" id="email">
+                      <label class="form-label" for="email">Email address</label>
+                      <input class="form-control" type="text" id="phone" name="email">
+                    </div>
+                  </div>
+                </fieldset>-->
+
+          <a class="button" href="service-list-2" role="button">Continue</a>
+        </form></div>
+     
+    </div>
+    </div>
+  
+</main>
+
+{% endblock %}
