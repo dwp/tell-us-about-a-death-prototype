@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-large">Thank you</h2>
+      <p class="lede">You have told us about the death of {{data['first-name-2']}}
+        {{data['last-name-2']}}.</p>
+      
+      <table>
+        <caption class="heading-medium">Government services</caption>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Action taken</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Service 1</td>
+            <td>Suspended the deceased's entitlement.</td> 
+          </tr>
+          <tr>
+            <td>Service 2</td>
+            <td>Suspended the deceased's entitlement.</td> 
+          </tr>
+          <tr>
+            <td>Service 3</td>
+            <td>Suspended the deceased's entitlement.</td> 
+          </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <caption class="heading-medium">Local authority services</caption>
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Action taken</th>
+          </tr>
+        </thead>
+        <tbody> 
+          <tr>
+            <td>Service 1</td>
+            <td>Suspended the deceased's entitlement.</td> 
+          </tr>
+          <tr>
+            <td>Service 2</td>
+            <td>Suspended the deceased's entitlement.</td> 
+          </tr>
+        </tbody>
+      </table>
+      <div class="form-group"></div>
+      <div class="form-group">
+        <div class="app-c-print-link">
+          <a href="#" class="app-c-print-link__link" rel="alternate">Print this summary </a>
+        </div>
+      </div>
+
+      <h2 class="heading-medium">What happens next</h2>
+      <p>We will inform the above government and local authority departments who will suspend any benefits
+      and/or services that {{data['first-name-2']}} {{data['last-name-2']}} was entitled to.</p>
+      <p>When we receive official confirmation from the Registrar, we will cancel those benefits 
+      and/or services.</p>
+      <p>When you are ready, click on the green button to confirm the above information.</p>
+      <div class="notice" style="margin-top:50px; margin-bottom:50px">
+        <i class="icon icon-important"><span class="visually-hidden">Please note</span></i>
+        <strong class="bold-small">By sending this information you understand that
+        government organisations will make necessary changes to any benefits and 
+        services that may have been received by {{data['first-name-2']}} {{data['last-name-2']}}.</strong>
+      </div>
+
+      <div class="form-group">
+        <form method="post" autocomplete="off">
+          <a class="button" href="5-complete" role="button">Continue</a>
+        </form>
+      </div>
+    </div>
+   </div>
+</main>
+
+{% endblock %}
