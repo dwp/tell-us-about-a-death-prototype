@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %} 
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Tell us about a death</h1>
+      <p class="lede">When someone dies, you can let most government organisations know in one go.</p>
+      <p>As soon as you can, you'll need to give some details about the person who died. This information will be
+        passed on to the following organisations:</p>
+        <ul class="list list-bullet">
+            <li>HM Revenue and Customs &ndash; to deal with any taxes and benefits</li>
+            <li>Department for Work and Pensions &ndash; to deal with any benefits and
+              State Pension</li>
+            <li>Passport Office &ndash; to cancel a British passport</li>
+            <li>Driver and Vehicle Licensing Agency &ndash; to cancel a driving licence</li>
+            <li>the local council &ndash; to deal with Council Tax, any Blue Badge, any
+              Housing Benefit, inform council housing services and remove the person
+            from the electoral register</li>
+          </ul>
+      <h2 class="heading-medium">Before you start</h2>
+      <p>You'll need:</p>
+      <ul class="list list-bullet">
+        <li>Name</li>
+        <li>Date of Birth</li>
+        <li>Postcode &ndash; where the person lived when they were alive</li>
+        <li>National Insurance Number</li>
+        <li>Date of Death</li>
+        <li>Your National Insurance number</li>
+      </ul>
+      <div class="form-group">
+        <a class="button button-start" href="2-details-deceased" role="button">Start now</a>
+      </div> 
+    </div>
+  
+</main>
+
+{% endblock %}
