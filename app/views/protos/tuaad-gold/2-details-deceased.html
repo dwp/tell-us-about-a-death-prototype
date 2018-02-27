@@ -13,7 +13,7 @@ Tell us about a death
   <div class="grid-row">
     <div class="column-two-thirds">
       <h1 class="heading-large">About the person who has died</h1>
-      <form method="post" autocomplete="off">
+      <form method="get" autocomplete="off">
       <div class="form-group">
         <label class="form-label-bold" for="first-name-2">First name</label>
         <input class="form-control" id="first-name-2" name="first-name-2" type="text">
@@ -48,11 +48,33 @@ Tell us about a death
           <label class="form-label-bold" for="postcode">
             Postcode
             <span class="form-hint">Enter the postcode where the deceased lived when they were alive. We need this 
-              to inform the local authority...
+              to inform the local authority.
             </span>
           </label>
           <input class="form-control form-control-1-4" id="postcode" type="text" name="ni-number">
         </div>
+        <div class="form-group">
+            <fieldset>
+              <legend>
+                <span class="form-label-bold">Date of death</h2>
+                <span class="form-hint" id="dod-hint">For example, 1 2 2018</span>
+              </legend>
+              <div class="form-date">
+                <div class="form-group form-group-day">
+                  <label class="form-label" for="dod-day">Day</label>
+                  <input class="form-control" id="dod-day" name="dod-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+                </div>
+                <div class="form-group form-group-month">
+                  <label class="form-label" for="dod-month">Month</label>
+                  <input class="form-control" id="dod-month" name="dod-month" type="number" pattern="[0-9]*" min="0" max="12">
+                </div>
+                <div class="form-group form-group-year">
+                  <label class="form-label" for="dod-year">Year</label>
+                  <input class="form-control" id="dod-year" name="dod-year" type="number" pattern="[0-9]*" min="0" max="2016">
+                </div>
+              </div>
+            </fieldset>
+          </div>
 
       <!--  <div class="form-group">
             <fieldset>
@@ -87,7 +109,7 @@ Tell us about a death
         </label>
         <input class="form-control" id="ni-number" type="text" name="ni-number">
       </div>
-      <button type="submit" class="button" role="button">Continue</button>
+      <a class="button" href="3-details-notifier" role="button">Continue</a>
       </form>
     </div>
   </div>
