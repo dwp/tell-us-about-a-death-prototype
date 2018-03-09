@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Prototype service
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">How did you know the person who died?</h1>
+      <div class="panel panel-border-wide">
+          <p>Organisations need to know this to work out who they can share information with.
+          </p>
+        </div>
+      <form method="post" autocomplete="off">
+
+
+        <div class="form-group">
+          <!-- <label class="form-label" for="relationship"><h2 class="heading-medium">Enter your relationship details</h2>
+           <span class="form-hint">For example, 'sister', 'husband', neighbour'.
+                </span> -->
+          </label>
+          <input class="form-control" id="relationship" type="text" name="relationship">
+        </div>
+        <a class="button" href="3-details-notifier" role="button">Continue</a>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
