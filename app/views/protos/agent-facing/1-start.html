@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+Prototype service
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Placeholder: service name</h1>
+      <p class="lede">When someone dies, you can let most government organisations know in one go.</p>
+      <p>As soon as you can, you'll need to give some details about the person who died. This information will be
+        passed on to the following organisations:</p>
+        <ul class="list list-bullet">
+            <li>HM Revenue and Customs &ndash; to deal with any taxes and benefits</li>
+            <li>Department for Work and Pensions &ndash; to deal with any benefits and
+              State Pension</li>
+            <li>Passport Office &ndash; to cancel a British passport</li>
+            <li>Driver and Vehicle Licensing Agency &ndash; to cancel a driving licence</li>
+            <li>the local council &ndash; to deal with Council Tax, any Blue Badge, any
+              Housing Benefit, inform council housing services and remove the person
+            from the electoral register</li>
+          </ul>
+      <h2 class="heading-medium">Before you start</h2>
+      <p>You'll need:</p>
+      <ul class="list list-bullet">
+        <li>the name of the person who died</li>
+        <li>their National Insurance number</li>
+        <li>their date of death</li>
+        <li>their date of birth</li>
+        <li>their most recent postcode</li>
+        <li>your National Insurance number</li>
+      </ul>
+      <div class="form-group">
+          <a class="button button-start" href="2-details-deceased" role="button">Start now</a>
+        </div>
+      <h2 class="heading-medium">Staying updated</h2>
+      <p>After you have given details about the death, you can choose to get updates on what's happening.</p>
+      <div class="panel panel-border-wide">
+          <p>You’ll need to prove your identity before you can get updates.
+            There’s information about how to do this at the end of this service.
+          </p>
+        </div>
+    </div>
+
+</main>
+
+{% endblock %}
