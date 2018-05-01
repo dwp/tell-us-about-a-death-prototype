@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Prototype service
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+  {% include "includes/phase_banner_alpha.html" %}
+  <br>
+  <nav class="nav-bar2">
+    <ul>
+      <li>
+        <a href="#" class="active">New notification</a>
+      </li>
+      <li>
+        <a href="#" class="">Existing notification</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-large">New notification</h1>
+      <h2 class="heading-medium">How did they know the deceased?</h2>
+      <form method="post" autocomplete="off">
+        <div class="form-group">
+          </label>
+          <input class="form-control" id="relationship" type="text" name="relationship">
+        </div>
+        <a class="button" href="3-deceased" role="button">Continue</a>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

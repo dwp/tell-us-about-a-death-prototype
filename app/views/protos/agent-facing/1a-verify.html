@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Prototype service
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+    {% include "includes/phase_banner_alpha.html" %}
+
+    <br>
+
+    <nav class="nav-bar2">
+        <ul>
+          <li>
+            <a href="#" class="active">New notification</a>
+          </li>
+          <li>
+            <a href="#" class="">Existing notification</a>
+          </li>
+        </ul>
+      </nav>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-large">New notification</h1>
+        <form>
+        <div class="form-group">
+          <fieldset class="inline">
+      
+            <legend>
+              <h1 class="heading-medium">
+                  Have you verified the informant?
+              </h1>
+            </legend>
+      
+            <div class="multiple-choice">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
+              <label for="radio-inline-1">Yes</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
+              <label for="radio-inline-2">No</label>
+            </div>
+      
+          </fieldset>
+        </div>
+      </form>
+      <a class="button" href="2-relationship" role="button">Continue</a>
+
+</main>
+
+{% endblock %}
