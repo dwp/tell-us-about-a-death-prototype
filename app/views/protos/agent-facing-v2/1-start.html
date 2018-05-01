@@ -95,10 +95,18 @@ Tell us about a death
                           <fieldset>
                             <label class="form-label-bold" for="nok">Is the caller the next of kin?</label>
 
-                            <div class="multiple-choice">
+                            <div class="multiple-choice" data-target="nok-yes-panel">
                               <input id="nok-yes" type="radio" name="radio-contact-group-1" value="Yes">
                               <label for="nok-yes">Yes</label>
                             </div>
+
+                            <div class="panel panel-border-narrow js-hidden" id="nok-yes-panel">
+                                <label class="form-label" for="postcode">Postcode</label>
+                                <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+                                <a class="button-secondary" href="#" role="button">Find address</a>
+                                <label class="form-label" for="phone-number">Phone number</label>
+                                <input class="form-control" id="phone-number" type="text" name="phone-number">
+                              </div>
 
                             <div class="multiple-choice" data-target="nok-no-panel">
                               <input id="nok-no" type="radio" name="radio-contact-group-1" value="No">
@@ -121,15 +129,25 @@ Tell us about a death
                           <fieldset>
                             <label class="form-label-bold" for="executor">Is the caller the executor?</label>
 
-                            <div class="multiple-choice">
+                            <div class="multiple-choice" data-target="executor-yes-panel">
                               <input id="executor-yes" type="radio" name="radio-contact-group-2" value="Yes">
                               <label for="executor-yes">Yes</label>
+                            </div>
+
+                            <div class="panel panel-border-narrow js-hidden" id="executor-yes-panel">
+                              <label class="form-label" for="postcode">Postcode</label>
+                              <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+                              <a class="button-secondary" href="#" role="button">Find address</a>
+                              <label class="form-label" for="phone-number">Phone number</label>
+                              <input class="form-control" id="phone-number" type="text" name="phone-number">
                             </div>
 
                             <div class="multiple-choice" data-target="executor-no">
                               <input id="executor" type="radio" name="radio-contact-group-2" value="No">
                               <label for="executor">No</label>
                             </div>
+
+                            
 
                             <div class="panel panel-border-narrow js-hidden" id="executor-no">
                                 <label class="form-label-bold" for="first-name-2">Executor's details</label>
