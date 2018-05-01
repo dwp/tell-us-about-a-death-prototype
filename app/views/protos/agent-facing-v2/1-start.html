@@ -52,7 +52,7 @@ Tell us about a death
               </li>
             </ul>
           </div>
-        
+
           <div class="tabs-content">
             <div class="tabs-panel" id="tab-1">
               <div class="tabs-panel-inner">
@@ -73,8 +73,8 @@ Tell us about a death
 
                       <div class="form-group">
                           <label class="form-label-bold" for="first-name-2">Leaflet code</label>
-                          <span class="form-hint">This a six digit code on the bottom right of the leaflet.
-                              <br>For example, ‘AB123C’.
+                          <span class="form-hint">This a 6 digit code - for example, ‘AB123C’.
+                              <br>It's on the bottom right of the leaflet.
                               </span>
                           <!--<details>
                               <summary><span class="summary">What is this?</span></summary>
@@ -89,22 +89,23 @@ Tell us about a death
                         <div class="form-group">
                           <label class="form-label-bold" for="first-name-2">Relationship to deceased</label>
                           <input class="form-control" id="first-name-2" name="first-name-2" type="text">
-                        </div>   
-                          
+                        </div>
+
                         <div class="form-group">
                           <fieldset>
                             <label class="form-label-bold" for="nok">Is the caller the next of kin?</label>
-                            
+
                             <div class="multiple-choice">
                               <input id="nok-yes" type="radio" name="radio-contact-group-1" value="Yes">
                               <label for="nok-yes">Yes</label>
                             </div>
-                           
+
                             <div class="multiple-choice" data-target="nok-no-panel">
                               <input id="nok-no" type="radio" name="radio-contact-group-1" value="No">
                               <label for="nok-no">No</label>
                             </div>
                             <div class="panel panel-border-narrow js-hidden" id="nok-no-panel">
+                              <label class="form-label-bold" for="first-name-2">Next of kin's details</label>
                               <label class="form-label" for="full-name">Full name</label>
                               <input class="form-control" id="full-name" type="text" name="full-name">
                               <label class="form-label" for="postcode">Postcode</label>
@@ -115,22 +116,23 @@ Tell us about a death
                             </div>
                           </fieldset>
                         </div>
-              
+
                         <div class="form-group">
                           <fieldset>
                             <label class="form-label-bold" for="executor">Is the caller the executor?</label>
-                           
+
                             <div class="multiple-choice">
                               <input id="executor-yes" type="radio" name="radio-contact-group-2" value="Yes">
                               <label for="executor-yes">Yes</label>
                             </div>
-                           
+
                             <div class="multiple-choice" data-target="executor-no">
                               <input id="executor" type="radio" name="radio-contact-group-2" value="No">
                               <label for="executor">No</label>
                             </div>
-                           
+
                             <div class="panel panel-border-narrow js-hidden" id="executor-no">
+                                <label class="form-label-bold" for="first-name-2">Executor's details</label>
                                 <label class="form-label" for="full-name">Full name</label>
                                 <input class="form-control" id="full-name" type="text" name="full-name">
                                 <label class="form-label" for="postcode">Postcode</label>
@@ -144,10 +146,10 @@ Tell us about a death
 
                           <button id="continue-to-deceased" class="button">Continue to deceased</button>
 
-                          
+
               </div>
             </div>
-        
+
             <div class="tabs-panel" id="tab-2">
               <div class="tabs-panel-inner">
                 <h2 class="js-hidden heading-medium">
@@ -159,7 +161,7 @@ Tell us about a death
                       <label class="form-label-bold" for="first-name-2">Full name</label>
                       <input class="form-control" id="first-name-2" name="first-name-2" type="text">
                     </div>
-                              
+
                     <div class="form-group">
                       <fieldset>
                         <legend>
@@ -182,7 +184,7 @@ Tell us about a death
                         </div>
                       </fieldset>
                     </div>
-            
+
                     <div class="form-group">
                       <label class="form-label-bold" for="ni-number">
                         National Insurance number
@@ -196,7 +198,7 @@ Tell us about a death
                     <div class="form-group">
                         <fieldset class="inline">
                             <label class="form-label-bold" for="verified">Have you verified the deceased?</label>
-                            <span class="form-hint">You can confirm this information by checking CIS</span>
+                            <span class="form-hint">Check this information in Customer Information System (CIS).</span>
                           <div class="multiple-choice">
                             <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">
                             <label for="radio-inline-1">Yes</label>
@@ -205,7 +207,7 @@ Tell us about a death
                             <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">
                             <label for="radio-inline-2">No</label>
                           </div>
-                      
+
                         </fieldset>
                       </div>
 
@@ -236,12 +238,12 @@ Tell us about a death
                           <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
                           <a class="button-secondary" href="#" role="button">Find address</a>
                       </div>
-                      
+
                       <button id="continue-to-other" class="button">Continue to other information </button>
 
               </div>
             </div>
-  
+
             <div class="tabs-panel" id="tab-3">
               <div class="tabs-panel-inner">
                 <h2 class="js-hidden heading-medium">Other information</h2>
@@ -255,7 +257,7 @@ Tell us about a death
                       <input class="form-control" id="passport-number" type="text" name="passport-number">
                     </div>
 
-                   
+
 
 
                 <a class="button" href="2-check-answers" role="button">Check all information</a>
@@ -264,14 +266,14 @@ Tell us about a death
             </div>
 
 
-            
-  
+
+
           </div>
         </div>
-  
+
   <!-- end Tabs -->
 
-          
+
       </div>
     </div>
 
