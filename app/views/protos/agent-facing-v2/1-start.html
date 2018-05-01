@@ -87,72 +87,60 @@ Prototype service
                           <input class="form-control form-control-1-4" id="first-name-2" name="first-name-2" type="text">
                         </div>
                         <div class="form-group">
-                            <label class="form-label-bold" for="first-name-2">Relationship to deceased</label>
-                            <input class="form-control" id="first-name-2" name="first-name-2" type="text">
-                          </div>   
+                          <label class="form-label-bold" for="first-name-2">Relationship to deceased</label>
+                          <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+                        </div>   
                           
-                          <div class="form-group">
-                              <fieldset>
-                                  <label class="form-label-bold" for="passport-number">Is the caller the next of kin?</label>
-                                  
-                            
-                                            <div class="multiple-choice" data-target="contact-by-phone">
-                                               <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
-                                                <label for="example-contact-by-phone">Yes</label>
-                                            </div>
-                                            <div class="multiple-choice" data-target="contact-by-email1">
-                                                <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
-                                                <label for="example-contact-by-email">No</label>
-                                              </div>
-                                              <div class="panel panel-border-narrow js-hidden" id="contact-by-email1">
-                                                  <label class="form-label" for="contact-email">Full name</label>
-                                                  <input class="form-control" id="passport-number" type="text" name="phone-number">
-                                                 <label class="form-label" for="contact-email">Postcode</label>
-                                                  <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
-                                                  <a class="button-secondary" href="#" role="button">Find address</a>
-                                                    <label class="form-label" for="contact-email">Phone number</label>
-                                                    <input class="form-control" id="passport-number" type="text" name="phone-number">
-                                                </div>
-                            
-                              </fieldset>
-                            </div>
-              
-                      <!--<div class="form-group">
-                        <label class="form-label" for="ni-number">
-                          Caller’s National Insurance number
-                           <span class="form-hint">It's on your National Insurance card, benefit letter, payslip or P60.
-                              <br>For example, ‘QQ 12 34 56 C’.
-                              </span> 
-                        </label>
-                        <input class="form-control" id="ni-number" type="text" name="ni-number">
-                      </div>-->
-                      
-
                         <div class="form-group">
-                            <fieldset>
-                                <label class="form-label-bold" for="passport-number">Is the caller the executor?</label>
-                                
-                          
-                                          <div class="multiple-choice" data-target="contact-by-phone">
-                                             <input id="example-contact-by-phone" type="radio" name="radio-contact-group" value="No">
-                                              <label for="example-contact-by-phone">Yes</label>
-                                          </div>
-                                          <div class="multiple-choice" data-target="contact-by-email">
-                                              <input id="example-contact-by-email" type="radio" name="radio-contact-group" value="Yes">
-                                              <label for="example-contact-by-email">No</label>
-                                            </div>
-                                            <div class="panel panel-border-narrow js-hidden" id="contact-by-email">
-                                                <label class="form-label" for="contact-email">Full name</label>
-                                                <input class="form-control" id="passport-number" type="text" name="phone-number">
-                                               <label class="form-label" for="contact-email">Postcode</label>
-                                                <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
-                                                <a class="button-secondary" href="#" role="button">Find address</a>
-                                                  <label class="form-label" for="contact-email">Phone number</label>
-                                                  <input class="form-control" id="passport-number" type="text" name="phone-number">
-                                              </div>
-                          
-                            </fieldset>
-                          </div>
+                          <fieldset>
+                            <label class="form-label-bold" for="nok">Is the caller the next of kin?</label>
+                            
+                            <div class="multiple-choice">
+                              <input id="nok-yes" type="radio" name="radio-contact-group-1" value="Yes">
+                              <label for="nok-yes">Yes</label>
+                            </div>
+                           
+                            <div class="multiple-choice" data-target="nok-no-panel">
+                              <input id="nok-no" type="radio" name="radio-contact-group-1" value="No">
+                              <label for="nok-no">No</label>
+                            </div>
+                            <div class="panel panel-border-narrow js-hidden" id="nok-no-panel">
+                              <label class="form-label" for="full-name">Full name</label>
+                              <input class="form-control" id="full-name" type="text" name="full-name">
+                              <label class="form-label" for="postcode">Postcode</label>
+                              <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+                              <a class="button-secondary" href="#" role="button">Find address</a>
+                              <label class="form-label" for="phone-number">Phone number</label>
+                              <input class="form-control" id="phone-number" type="text" name="phone-number">
+                            </div>
+                          </fieldset>
+                        </div>
+              
+                        <div class="form-group">
+                          <fieldset>
+                            <label class="form-label-bold" for="executor">Is the caller the executor?</label>
+                           
+                            <div class="multiple-choice">
+                              <input id="executor-yes" type="radio" name="radio-contact-group-2" value="Yes">
+                              <label for="executor-yes">Yes</label>
+                            </div>
+                           
+                            <div class="multiple-choice" data-target="executor-no">
+                              <input id="executor" type="radio" name="radio-contact-group-2" value="No">
+                              <label for="executor">No</label>
+                            </div>
+                           
+                            <div class="panel panel-border-narrow js-hidden" id="executor-no">
+                                <label class="form-label" for="full-name">Full name</label>
+                                <input class="form-control" id="full-name" type="text" name="full-name">
+                                <label class="form-label" for="postcode">Postcode</label>
+                                <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+                                <a class="button-secondary" href="#" role="button">Find address</a>
+                                <label class="form-label" for="phone-number">Phone number</label>
+                                <input class="form-control" id="phone-number" type="text" name="phone-number">
+                              </div>
+                          </fieldset>
+                        </div>
 
                           <button id="continue-to-deceased" class="button">Continue to deceased</button>
 
