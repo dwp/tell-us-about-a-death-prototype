@@ -106,25 +106,35 @@ $('[role="tab"]').on('click', function (e) {
   e.preventDefault()
 
   // Remove focusability [sic] and aria-selected
-
   $('[role="tab"]').attr({
     tabindex: '-1',
     'aria-selected': false
   })
 
   // Replace above on clicked tab
-
   $(this).attr({
     'aria-selected': true,
     tabindex: '0'
   })
 
   // Hide panels
-
   $($container + ' [role="tabpanel"]').attr('aria-hidden', 'true')
 
   // Show corresponding panel
-
   $('#' + $(this).attr('href').substring(1))
     .attr('aria-hidden', false)
+})
+
+$(document).on('click', '#continue-to-deceased', function (e) {
+  e.preventDefault()
+  $('#tabButton-2').trigger('click')
+  $(document).scrollTop('#tabButton-2')
+  $('#tabButton-2').focus()
+})
+
+$(document).on('click', '#continue-to-other', function (e) {
+  e.preventDefault()
+  $('#tabButton-3').trigger('click')
+  $(document).scrollTop('#tabButton-3')
+  $('#tabButton-3').focus()
 })

@@ -36,3 +36,10 @@ $path: "/public/images/";
 @import 'nav2.scss';
 @import 'tabs';
 @import 'find-a-payment-schedule';
+
+.button-secondary { 
+  box-shadow: 0 2px 0 #6f777b;
+  background-color: #dee0e2; 
+  padding: 5px;
+  text-decoration: none;
+}

@@ -41,12 +41,12 @@ Prototype service
                 </a>
               </li>
               <li>
-                <a href="#tab-2">
+                <a id="tabButton-2" href="#tab-2">
                   Deceased
                 </a>
               </li>
               <li>
-                <a href="#tab-3">
+                <a id="tabButton-3" href="#tab-3">
                   Other information
                 </a>
               </li>
@@ -109,7 +109,7 @@ Prototype service
                                                   <input class="form-control" id="passport-number" type="text" name="phone-number">
                                                  <label class="form-label" for="contact-email">Postcode</label>
                                                   <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
-                                                  <a class="button" href="#" role="button">Find address</a>
+                                                  <a class="button-secondary" href="#" role="button">Find address</a>
                                                     <label class="form-label" for="contact-email">Phone number</label>
                                                     <input class="form-control" id="passport-number" type="text" name="phone-number">
                                                 </div>
@@ -146,7 +146,7 @@ Prototype service
                                                 <input class="form-control" id="passport-number" type="text" name="phone-number">
                                                <label class="form-label" for="contact-email">Postcode</label>
                                                 <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
-                                                <a class="button" href="#" role="button">Find address</a>
+                                                <a class="button-secondary" href="#" role="button">Find address</a>
                                                   <label class="form-label" for="contact-email">Phone number</label>
                                                   <input class="form-control" id="passport-number" type="text" name="phone-number">
                                               </div>
@@ -154,9 +154,9 @@ Prototype service
                             </fieldset>
                           </div>
 
-                          <a href="#tab-2">
-                              next tab
-                            </a>
+                          <button id="continue-to-deceased" class="button">Continue to deceased</button>
+
+                          
               </div>
             </div>
         
@@ -246,9 +246,10 @@ Prototype service
                       <div class="form-group">
                           <label class="form-label-bold" for="contact-email">Postcode</label>
                           <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
-                          <a class="button" href="#" role="button">Find address</a>
+                          <a class="button-secondary" href="#" role="button">Find address</a>
                       </div>
                       
+                      <button id="continue-to-other" class="button">Continue to other information </button>
 
               </div>
             </div>
