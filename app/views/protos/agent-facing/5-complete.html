@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Prototype service
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+    <br>
+
+  <nav class="nav-bar2">
+      <ul>
+        <li>
+          <a href="#" class="active">New notification</a>
+        </li>
+        <li>
+          <a href="#" class="">Existing notification</a>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">Notification complete</h1>
+        <p><strong class="heading-small">Your reference number is AB12345YZ.</strong></p>
+      </div>
+      <p>You have told us about the death of Jane Smith. You do not need to do anything else.</p>
+      <h2 class="heading-medium">What we have done</h2>
+      <p>We have informed all relevant government and local authority departments who will suspend any services and benefits that 
+        {{data['first-name-2']}} {{data['last-name-2']}} was entitled to.</p>
+      <p>You will receive a letter confirming your notification within 3 working days.</p>
+      <h2 class="heading-medium">What we will do next</h2>
+      <p>When the death is registered with a registrar, we will receive an official confirmation of the death.</p>
+      <p>We will then inform all relevant government and local authority departments who will cancel all services and benefits that 
+        {{data['first-name-2']}} {{data['last-name-2']}} was entitled to.</p>
+      <p>You will receive a letter confirming that we completed our actions within 10 working days.</p>
+      <h2 class="heading-medium">Contacting us</h2>
+      <p>If you wish to contact us to check on progress, please telephone 01234567890. You will be asked for your reference number and to 
+        confirm your identity.</p>
+    </div>
+   </div>
+</main>
+
+{% endblock %}

@@ -2,6 +2,24 @@
 
 {% block head %}
   {% include "includes/head.html" %}
+  {% if agent %}
+    {% set global_header_text = "DWP" %}
+    <style>
+      #global-header #logo {
+        background: none;
+        line-height: .8;
+        padding-top: 5px;
+      }
+
+      #global-header #logo img {
+        display: none;
+      }
+
+      #global-header-bar {
+        display: none;
+      }
+    </style>
+  {% endif %}
 {% endblock %}
 
 {% block cookie_message %}
@@ -28,6 +46,10 @@
         -->
       </nav>
     </div>
+  </div>
+
+  <div id="big-blue-header">
+
   </div>
 
 {% endblock %}
