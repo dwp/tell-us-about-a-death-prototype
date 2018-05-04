@@ -1,0 +1,287 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+
+  <br>
+
+  <nav class="nav-bar2">
+      <ul>
+        <li>
+          <a href="1-start" class="active">New notification</a>
+        </li>
+        <li>
+          <a href="3-find" class="">Existing notification</a>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-medium">Check this information</h2>
+      <p>You've collected details about the death of Jane Smith.</p>
+      <h2 class="heading-medium">Caller’s details</h2>
+        <dl class="govuk-check-your-answers cya-questions-short">
+          <div>
+            <dt class="cya-question">Name
+              </dt>
+              <dd class="cya-answer">
+                John Smith
+              </dd>
+              <dd class="cya-change">
+                <a href="1-start">
+                  Change<span class="visually-hidden"> name</span>
+                </a>
+              </dd>
+            </div>
+
+            <div>
+                <dt class="cya-question">
+                  Leaflet code
+                </dt>
+                <dd class="cya-answer">
+                    AB123C
+                </dd>
+                <dd class="cya-change">
+                  <a href="1-start">
+                    Change<span class="visually-hidden"> Leaflet code</span>
+                  </a>
+                </dd>
+              </div>
+
+                <div>
+                  <dt class="cya-question">
+                    Relationship to deceased
+                  </dt>
+                  <dd class="cya-answer">
+                    Husband
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="1-start">
+                      Change<span class="visually-hidden"> Relationship to deceased</span>
+                    </a>
+                  </dd>
+                </div>
+
+                <div>
+                  <dt class="cya-question">
+                    Address
+                  </dt>
+                  <dd class="cya-answer">
+                    72 Guild Street<br />
+                    London<br />
+                    SE23 6FH
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="1-start">
+                      Change<span class="visually-hidden"> Address</span>
+                    </a>
+                  </dd>
+
+                </div>
+
+                <div>
+                    <dt class="cya-question">
+                      Phone number
+                    </dt>
+                    <dd class="cya-answer">
+                      01234 567 890
+                    </dd>
+                    <dd class="cya-change">
+                      <a href="1-start">
+                        Change<span class="visually-hidden">Phone number</span>
+                      </a>
+                    </dd>
+
+                  </div>
+
+          </dl>
+
+          <h2 class="heading-medium">Deceased’s details </h2>
+          <dl class="govuk-check-your-answers cya-questions-short">
+              <div>
+                <dt class="cya-question">
+                  Name
+                </dt>
+                <dd class="cya-answer">
+                  Jane Smith
+                </dd>
+                <dd class="cya-change">
+                  <a href="1-start">
+                    Change<span class="visually-hidden"> name</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div>
+                  <dt class="cya-question">
+                    Date of birth
+                  </dt>
+                  <dd class="cya-answer">
+                    5 January 1954
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="1-start">
+                      Change<span class="visually-hidden"> date of birth</span>
+                    </a>
+                  </dd>
+                </div>
+
+              <div>
+                <dt class="cya-question">
+                  National Insurance number
+                </dt>
+                <dd class="cya-answer">
+                  QQ 12 34 56 C
+                </dd>
+                <dd class="cya-change">
+                  <a href="1-start">
+                    Change<span class="visually-hidden"> date of birth</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div>
+                  <dt class="cya-question">
+                    Date of death
+                  </dt>
+                  <dd class="cya-answer">
+                    30 April 2018
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="1-start">
+                      Change<span class="visually-hidden"> date of birth</span>
+                    </a>
+                  </dd>
+                </div>
+
+              <div>
+                <dt class="cya-question">
+                  Home address
+                </dt>
+                <dd class="cya-answer">
+                  72 Guild Street<br />
+                  London<br />
+                  SE23 6FH
+                </dd>
+                <dd class="cya-change">
+                  <a href="1-start">
+                    Change<span class="visually-hidden"> home address</span>
+                  </a>
+                </dd>
+              </div>
+
+              <div>
+                  <dt class="cya-question">
+                    Passport number
+                  </dt>
+                  <dd class="cya-answer">
+                      925665416
+                  </dd>
+                  <dd class="cya-change">
+                    <a href="1-start">
+                      Change<span class="visually-hidden"> Passport number</span>
+                    </a>
+                  </dd>
+                </div>
+            </dl>
+
+
+
+
+
+
+         <!--
+      <table>
+        <caption class="heading-medium">The following changes will be made:</caption>
+        <thead>
+          <tr>
+            <td class="heading-small">What will change</td>
+            <td class="heading-small">How it will change</td>
+          </tr>
+        </thead>
+          <tbody>
+          <tr>
+            <td>State Pension</td>
+            <td>Payments will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td>Pension Credit</td>
+            <td>Payments will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td>Carer's Allowance</td>
+            <td>The underlying entitlement will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td> Housing Benefit </td>
+              <td>When we receive official confirmation of death, this will be adjusted</td>
+          </tr>
+          <tr>
+            <td>Council Tax</td>
+            <td>When we receive official confirmation of death, this will be adjusted</td>
+          </tr>
+          <tr>
+            <td>Attendance Allowance</td>
+            <td>Payments will be suspended pending cancellation</td>
+          </tr>
+          <tr>
+            <td>Blue Badge</td>
+            <td>This will be suspended pending cancellation to prevent fraudulent use</td>
+          </tr>
+          <tr>
+            <td>Council housing</td>
+            <td>When we receive official confirmation of death, the council will contact the
+              person dealing with the affairs of Jane Smith to let them know how the tenancy will change</td>
+          </tr>
+        </tbody>
+      </table> -->
+
+      <table>
+        <thead>
+          <caption class="heading-medium">Other information</caption>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Driving licence number</th>
+            <td><a href="1-start#tab-2">Add</a></td>
+          </tr>
+         <!-- <tr>
+              <th>Vehicle registration</th>
+              <td><a href="#">Add</a></td>
+            </tr>
+          <tr>
+            <th>Passport number</th>
+            <td><a href="#">Add</a></td>
+          </tr> -->
+        </tbody>
+      </table>
+
+      <div class="notice" style="margin-top:50px; margin-bottom:50px">
+        <i class="icon icon-important">
+          <span class="visually-hidden">Please note</span>
+        </i>
+        <strong class="bold-small">The information you have provided will be passed on to the organisations.
+          Do I have your consent?
+        </strong>
+      </div>
+
+      <form method="post" autocomplete="off">
+        <div class="form-group">
+            <a class="button" href="6-wrap.html" role="button">Confirm and save notification</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}
