@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+{% include "includes/blue-banner.html" %}
+
+<main id="content" role="main">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+            <h1 class="heading-xlarge">Tell Us About a Death</h1>
+            <nav class="nav-bar2">
+                <ul>
+                    <li>
+                    <a href="1-start" class="">New notification</a>
+                    </li>
+                    <li>
+                    <a href="3-find" class="">Find notification</a>
+                    </li>
+                </ul>
+            </nav>  
+         </div>
+    </div>
+
+</main>
+
+{% endblock %}

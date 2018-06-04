@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <div class="govuk-box-highlight">
+        <h1 class="heading-xlarge">Notification complete</h1>
+      </div>
+      <h2 class="heading-medium">What this means</h2>
+      <p>We have passed the information the caller provided to all relevant government and local authority departments. They will suspend any services and benefits
+        Jane Smith received.</p>
+      <p>For example, if they:</p>
+      <ul class="list list-bullet">
+  <li>had a State Pension, this will be suspended</li>
+  <li>got benefits, like Employment and Support Allowance, this will be suspended</li>
+  <li>used a Blue Badge, this will be suspended</li>
+</ul>
+      <p>The caller will get a letter confirming this notification within 7 working days.</p>
+      <h2 class="heading-medium">What happens next</h2>
+      <p>When the death is registered with a registrar, the death will be confirmed.</p>
+      <p>This confirmation will then be passed on to relevant government and local authority departments. They will cancel any services and benefits that
+          Jane Smith was entitled to.</p>
+      <p>The caller will get a letter confirming which services and benefits have been cancelled within the next 4 weeks.</p>
+      <h2 class="heading-medium">Getting financial support</h2>
+      <p>If the next of kin can get any financial support following this death, we'll write to you with details of how to apply.</p>
+      <h2 class="heading-medium">Getting emotional support</h2>
+      <p>Cruse Bereavement Care is a voluntary organisation that offers emotional help and support during a bereavement.</p>
+      <p>
+        <strong>Cruse Bereavement Care</strong>
+        <br>Telephone: 0808 808 1677
+        <br>Website: www.cruse.org.uk</p>
+      <p>
+    </div>
+   </div>
+</main>
+
+{% endblock %}

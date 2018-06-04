@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+        <h2 class="heading-medium">Deceased’s information</h2>
+        <p>You are reviewing details about the death of Jane Smith.</p>
+        
+        <table>
+            <caption class="heading-medium">Deceased’s details</caption>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>Jane Smith</td>
+              </tr>
+              <tr>
+                <td>Date of Death</td>
+                <td>30 April 2018</td>
+              </tr>
+              <tr>
+                <td>National Insurance number</td>
+                <td>QQ 12 34 56 C</td>
+              </tr>
+              <tr>
+                  <td>Date of birth</td>
+                  <td>5 January 1954</td> 
+                </tr>
+              <tr>
+                <td>Address</td>
+                <td>72 Guild Street<br />
+                  London<br />
+                  SE23 6FH</td>
+              </tr>
+              <tr>
+                  <td>Passport number</td>
+                  <td>925665416</td>
+                </tr>
+            </tbody>
+          </table>
+        
+        <table>
+            <caption class="heading-medium">Notifier’s details</caption>
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td>John Smith</td>
+              </tr>
+              <tr>
+                <td>Leaflet code</td>
+                <td>AB123C</td>
+              </tr>
+              <tr>
+                <td>Relationship to deceased</td>
+                <td>Husband</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td>72 Guild Street<br />
+                  London<br />
+                  SE23 6FH</td>
+              </tr>
+              <tr>
+                  <td>Phone number</td>
+                  <td>01234 567 890</td>
+                </tr>
+            </tbody>
+          </table>
+
+          
+    </div>
+   </div>
+</main>
+
+{% endblock %}
