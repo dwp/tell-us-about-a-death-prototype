@@ -4,8 +4,8 @@ const relationshipSetup = () => {
 	// Adjective form of marital status, Probably need to account for typos, different variations
 	const maritalStatuses = ['married', 'single', 'divorced', 'widowed', 'civilpartnership'];
 	// Same as above, although this is the noun form
-	const relationshipStatuses = ['wife', 'husband', 'civilpartner', 'exwife', 'exhusband', 'separated']; // again, take into account different variations of these words, do we leave it up to the agent to translate?
-	// Collates the above two lists into one for an easy search but I think this may not be necessary
+	// again, take into account different variations of these words, do we leave it up to the agent to translate?
+	const relationshipStatuses = ['wife', 'husband', 'civilpartner', 'exwife', 'exhusband', 'separated'];
 	const allStatuses = [...maritalStatuses, ...relationshipStatuses]
 
 	/*
@@ -15,7 +15,7 @@ const relationshipSetup = () => {
 	 */
 	const getRelationship = (val) => {
 		const relationship = val.toLowerCase().replace(/-|\s/g, '');
-		// probably don't need this as the default of match returns an empty string anyway
+		// Check this to prevent a pointless status match
 		const hasStatus = allStatuses.includes(relationship);
 
 		if (hasStatus) {
@@ -30,7 +30,7 @@ const relationshipSetup = () => {
 	 * @returns {string} relationship status of the deceased
 	 * multiple cases are being shit...
 	 */
-	const matchStatus = (val) => { // tidy up cases
+	const matchStatus = (val) => {
 		switch(val) {
 			case 'wife':
 			case 'husband':
