@@ -2,7 +2,7 @@ const relationshipSetup = () => {
 	const relationship = document.getElementById('relationship');
 
 	// Adjective form of marital status, Probably need to account for typos, different variations
-	const maritalStatuses = ['married', 'single', 'divorced', 'widowed', 'civilpartnered', 'civilpartnership'];
+	const maritalStatuses = ['married', 'single', 'divorced', 'widowed', 'civilpartnership'];
 	// Same as above, although this is the noun form
 	const relationshipStatuses = ['wife', 'husband', 'civilpartner', 'exwife', 'exhusband', 'separated']; // again, take into account different variations of these words, do we leave it up to the agent to translate?
 	// Collates the above two lists into one for an easy search but I think this may not be necessary
@@ -33,24 +33,25 @@ const relationshipSetup = () => {
 	const matchStatus = (val) => { // tidy up cases
 		switch(val) {
 			case 'wife':
-				return 'married';
 			case 'husband':
+			case 'married':
 				return 'married';
 
 			case 'civilpartner':
-				return 'civil parternship';
 			case 'civilpartnered':
-				return 'civil parternship';
 			case 'civilpartnership':
 				return 'civil parternship';
 
 			case 'exwife':
-				return 'divorced';
 			case 'exhusband':
+			case 'divorced':
 				return 'divorced';
 
 			case 'separated':
 				return 'separated';
+
+			case 'single':
+				return 'single';
 
 			default:
 				return ''
