@@ -84,20 +84,38 @@ const relationshipSetup = () => {
 	}
 }
 
-// What happens if they get the executor's no first, then last spousal partner, then It doesn't belong in the last one...
-// Question at the bottom, Are they neither??? do they want us to contact them? reveqal their contact
-// Do we show callers details wherever they last say no, probably not -- too finnicky
 const callerSetup = () => {
 	// Second version of this
 	const separateCallerFormEl = document.getElementById('caller-form');
 	const callerDetailsEl = document.getElementById('caller-no');
 
-	let isCallerSurvivingSpouse = true; // ...dont do this, making assumptions
+	let isCallerSurvivingSpouse = true; // ...Need a better way to do this, dont want to swap types but we need a false, and dont want to negate the var
 	let isCallerExecutor = true;
 
 	const toggleViews = el => {
 		const shouldCaptureCallersDetails = () => {
 			return !isCallerExecutor && !isCallerSurvivingSpouse;
+		};
+
+
+		const checkEnteredValues = (input) => {
+			const type = input.dataset.type;
+			console.log(input.dataset.type)
+			const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
+			const isCallerExecutorPostcodeEl = document.getElementById('executor-yes-postcode');
+			const isSpouseOptions = document.getElementById('spouse-yes-panel'); // rename these
+			const isExecutorOptions = document.getElementById('executor-yes-panel');
+			if (type === 'spouse') {
+				if (isCallerExecutorPostcodeEl.value) { // There is a postcode in the input, dont show the others
+					console.log(isCallerExecutorPostcodeEl.value)
+					isSpouseOptions.classList.add('js-hidden');
+				}
+			} else {
+				if (isCallerSpousePostcodeEl.value) { // There is a postcode in the input, dont show the others
+					console.log(isCallerSpousePostcodeEl.value)
+					isExecutorOptions.classList.add('js-hidden');
+				}
+			}
 		};
 
 		el.addEventListener('change', e => {
@@ -117,8 +135,11 @@ const callerSetup = () => {
 				callerDetailsEl.classList.add('js-hidden-temp');
 			} else if (separateCallerFormEl) {
 				separateCallerFormEl.classList.add('js-hidden');
+				checkEnteredValues(e.target);
+			} else {
+				checkEnteredValues(e.target);
 			}
-		})
+		});
 	}
 
 	[...document.querySelectorAll('[name="radio-contact-group-1"]')].forEach(el => toggleViews(el));

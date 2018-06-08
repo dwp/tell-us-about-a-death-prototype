@@ -32,12 +32,12 @@
       <div class="form-group">
         <fieldset>
           <label class="form-label-bold" for="nok">Is the caller the surviving spouse?</label>
-          <div class="multiple-choice" data-target="nok-yes-panel">
+          <div class="multiple-choice" data-target="spouse-yes-panel">
             <input id="spouse-yes" type="radio" name="radio-contact-group-1" value="Yes" data-type="spouse">
             <label for="spouse-yes">Yes</label>
           </div>
 
-          <div class="panel panel-border-narrow js-hidden" id="nok-yes-panel">
+          <div class="panel panel-border-narrow js-hidden" id="spouse-yes-panel">
             <label class="form-label" for="spouse-yes-postcode">Postcode</label>
             <input class="form-control form-control-1-4" id="spouse-yes-postcode" type="text" name="postcode">
             <button class="button-secondary" href="#" role="button">Find address</button>
@@ -98,7 +98,10 @@
       </div>
 
       <div class="form-group js-hidden" id="caller-form">
-        <label class="form-label-bold" for="executor">Address</label>
+        <label class="form-label-bold" for="executor">
+          Address
+          <span class="form-hint">Ask the caller for their address so we can contact them if we need to.</span>
+        </label>
         <label class="form-label" for="postcode">Postcode</label>
         <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
         <button class="button-secondary" href="#" role="button">Find address</button>
