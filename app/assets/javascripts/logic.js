@@ -84,4 +84,46 @@ const relationshipSetup = () => {
 	}
 }
 
+// What happens if they get the executor's no first, then last spousal partner, then It doesn't belong in the last one...
+// Question at the bottom, Are they neither??? do they want us to contact them? reveqal their contact
+// Do we show callers details wherever they last say no, probably not -- too finnicky
+const callerSetup = () => {
+	// Second version of this
+	const separateCallerFormEl = document.getElementById('caller-form');
+	const callerDetailsEl = document.getElementById('caller-no');
+
+	let isCallerSurvivingSpouse = true; // ...dont do this, making assumptions
+	let isCallerExecutor = true;
+
+	const toggleViews = el => {
+		const shouldCaptureCallersDetails = () => {
+			return !isCallerExecutor && !isCallerSurvivingSpouse;
+		};
+
+		el.addEventListener('change', e => {
+			const state = (e.target.value.toLowerCase() === 'yes');
+			if (e.target.dataset.type === 'spouse') {
+				isCallerSurvivingSpouse = state;
+			} else {
+				isCallerExecutor = state;
+			}
+			if (shouldCaptureCallersDetails()) {
+				if (separateCallerFormEl) {
+					separateCallerFormEl.classList.remove('js-hidden');
+				} else if (callerDetailsEl) {
+					callerDetailsEl.classList.remove('js-hidden-temp');
+				}
+			} else if (callerDetailsEl) {
+				callerDetailsEl.classList.add('js-hidden-temp');
+			} else if (separateCallerFormEl) {
+				separateCallerFormEl.classList.add('js-hidden');
+			}
+		})
+	}
+
+	[...document.querySelectorAll('[name="radio-contact-group-1"]')].forEach(el => toggleViews(el));
+	[...document.querySelectorAll('[name="radio-contact-group-2"]')].forEach(el => toggleViews(el));
+}
+
 relationshipSetup();
+callerSetup();

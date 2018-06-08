@@ -1,0 +1,112 @@
+<div class="tabs-panel" id="tab-3">
+  <div class="tabs-panel-inner">
+    <h2 class="js-hidden heading-medium">
+      Deceased’s personal details
+    </h2>
+    <h2 class="heading-medium">Deceased’s personal details</h2>
+    <form method="post" autocomplete="off">
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold">Date of death</span>
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="nok">Did they die in hospital?</label>
+          <div class="multiple-choice" data-target="hospital-yes-panel">
+            <input id="hospital-yes" type="radio" name="radio-contact-group-5" value="Yes">
+            <label for="hospital-yes">Yes</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="hospital-yes-panel">
+            <label class="form-label" for="hospital-yes-phone-number">Which hospital?</label>
+            <input class="form-control" id="hospital-yes-phone-number" type="text" name="phone-number">
+            <label class="form-label" for="phone-number">How long were they in hospital?</label>
+            <input class="form-control form-control-1-4" id="phone-number" type="text" name="phone-number">
+          </div>
+
+          <div class="multiple-choice" data-target="hospital-no-panel">
+            <input id="hospital-no" type="radio" name="radio-contact-group-5" value="No">
+            <label for="hospital-no">No</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="hospital-no-panel">
+            <label class="form-label-bold" for="death-location">Where did they die?</label>
+            <label class="form-label" for="spouse-yes-postcode">Postcode</label>
+            <input class="form-control form-control-1-4" id="spouse-yes-postcode" type="text" name="postcode">
+            <button class="button-secondary" href="#" role="button">Find address</a>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="nok">Same address as caller?</label>
+          <div class="multiple-choice" data-target="same-address-yes-panel">
+            <input id="same-address-yes" type="radio" name="radio-contact-group-6" value="Yes">
+            <label for="same-address-yes">Yes</label>
+          </div>
+          <div class="multiple-choice" data-target="same-address-no-panel">
+            <input id="same-address-no" type="radio" name="radio-contact-group-6" value="No">
+            <label for="same-address-no">No</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="same-address-no-panel">
+            <label class="form-label" for="postcode">Postcode</label>
+            <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+            <button class="button-secondary" href="#" role="button">Find address</a>
+          </div>
+        </fieldset>
+      </div>
+      <h2 class="heading-medium">Other information</h2>
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="dvla">Did the deceased have a driving licence?</label>
+          <div class="multiple-choice" data-target="dvla-yes-panel">
+            <input id="dvla-yes" type="radio" name="radio-contact-group-8" value="Yes">
+            <label for="dvla-yes">Yes</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="dvla-yes-panel">
+            <label class="form-label" for="driving-licence-number">Driving licence number</label>
+            <input class="form-control" id="driving-licence-number" type="text" name="driving-licence-number">
+          </div>
+          <div class="multiple-choice" data-target="dvla-no-panel">
+            <input id="dvla-no" type="radio" name="radio-contact-group-8" value="No">
+            <label for="dvla-no">No</label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="passport">Did the deceased have a passport?</label>
+          <div class="multiple-choice" data-target="passport-yes-panel">
+            <input id="passport-yes" type="radio" name="radio-contact-group-9" value="Yes">
+            <label for="passport-yes">Yes</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="passport-yes-panel">
+            <label class="form-label" for="passport-number">Passport number</label>
+            <input class="form-control" id="passport-number" type="text" name="passport-number">
+          </div>
+          <div class="multiple-choice" data-target="passport-no-panel">
+            <input id="passport-no" type="radio" name="radio-contact-group-9" value="No">
+            <label for="passport-no">No</label>
+          </div>
+        </fieldset>
+      </div>
+
+      <a class="button" href="2-check-answers" role="button">Check all information</a>
+    </form>
+  </div>
+</div>

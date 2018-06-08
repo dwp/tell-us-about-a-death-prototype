@@ -38,9 +38,10 @@ $path: "/public/images/";
 @import 'find-a-payment-schedule';
 @import 'big-blue-button';
 
-.button-secondary { 
-  box-shadow: 0 2px 0 #6f777b;
-  background-color: #dee0e2; 
-  padding: 5px;
-  text-decoration: none;
+.button-secondary {
+  @include button($grey-3);
+}
+
+.js-hidden-temp { // Move this somewhere else and sort logic out to use correct js
+  display: none;
 }
