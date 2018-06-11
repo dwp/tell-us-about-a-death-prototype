@@ -87,49 +87,46 @@ const relationshipSetup = () => {
 const callerSetup = () => {
 	// Second version of this
 	const separateCallerFormEl = document.getElementById('caller-form');
-	const callerDetailsEl = document.getElementById('caller-no');
 
 	let isCallerSurvivingSpouse = true; // ...Need a better way to do this, dont want to swap types but we need a false, and dont want to negate the var
 	let isCallerExecutor = true;
 
+	// This will hide the parent element if needed, and also hide any children elements
+	const hideRedundantFields = el => {
+		// Else should be fine, because if parent is hidden then subsequent children can't be hidden
+		if (el.classList.contains('js-hide-field')) {
+			el.classList.add('js-hidden');
+		} else {
+			const hiddenEls = [...el.querySelectorAll('.js-hide-field')];
+			hiddenEls.forEach(hiddenEl => {
+				hiddenEl.classList.add('js-hidden');
+			});
+		}
+	};
+
+	const shouldCaptureCallersDetails = () => {
+		return !isCallerExecutor && !isCallerSurvivingSpouse;
+	};
+
+	const checkEnteredValues = (input) => {
+		const type = input.dataset.type;
+		const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
+		const isCallerExecutorPostcodeEl = document.getElementById('executor-yes-postcode');
+		const isSpouseOptions = document.getElementById('spouse-yes-panel'); // rename these
+		const isExecutorOptions = document.getElementById('executor-yes-panel');
+
+		if (type === 'spouse') {
+			if (isCallerExecutorPostcodeEl.value) { // There is a postcode in the input, dont show the others
+				hideRedundantFields(isSpouseOptions);
+			}
+		} else {
+			if (isCallerSpousePostcodeEl.value) { // There is a postcode in the input, dont show the others
+				hideRedundantFields(isExecutorOptions);
+			}
+		}
+	};
+
 	const toggleViews = el => {
-		const shouldCaptureCallersDetails = () => {
-			return !isCallerExecutor && !isCallerSurvivingSpouse;
-		};
-
-		// This will hide the parent element if needed, and also hide any children elements
-		const hideRedundantFields = el => {
-			// Else should be fine, because if parent is hidden then subsequent children can't be hidden
-			if (el.classList.contains('js-hide-field')) {
-				el.classList.add('js-hidden');
-			} else {
-				const hiddenEls = [...el.querySelectorAll('.js-hide-field')];
-				hiddenEls.forEach(hiddenEl => {
-					hiddenEl.classList.add('js-hidden');
-				});
-			}
-		};
-
-		const checkEnteredValues = (input) => {
-			const type = input.dataset.type;
-			const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
-			const isCallerExecutorPostcodeEl = document.getElementById('executor-yes-postcode');
-			const isSpouseOptions = document.getElementById('spouse-yes-panel'); // rename these
-			const isExecutorOptions = document.getElementById('executor-yes-panel');
-
-			if (type === 'spouse') {
-				if (isCallerExecutorPostcodeEl.value) { // There is a postcode in the input, dont show the others
-					hideRedundantFields(isSpouseOptions);
-				}
-			} else {
-				if (isCallerSpousePostcodeEl.value) { // There is a postcode in the input, dont show the others
-					hideRedundantFields(isExecutorOptions);
-				}
-			}
-		};
-
-		// The reason this is logic heavy is because im supporting two variations, an inline Q and an additional Q
-		// Im going to remove the inline Q cos there's too much logic behind that idea
 		el.addEventListener('change', e => {
 			const state = (e.target.value.toLowerCase() === 'yes');
 			if (e.target.dataset.type === 'spouse') {
@@ -140,15 +137,9 @@ const callerSetup = () => {
 			if (shouldCaptureCallersDetails()) {
 				if (separateCallerFormEl) {
 					separateCallerFormEl.classList.remove('js-hidden');
-				} else if (callerDetailsEl) {
-					callerDetailsEl.classList.remove('js-hidden-temp');
 				}
-			} else if (callerDetailsEl) {
-				callerDetailsEl.classList.add('js-hidden-temp');
-			} else if (separateCallerFormEl) {
-				separateCallerFormEl.classList.add('js-hidden');
-				checkEnteredValues(e.target);
 			} else {
+				separateCallerFormEl.classList.add('js-hidden');
 				checkEnteredValues(e.target);
 			}
 		});
