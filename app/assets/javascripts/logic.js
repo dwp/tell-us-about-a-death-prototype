@@ -97,6 +97,19 @@ const callerSetup = () => {
 			return !isCallerExecutor && !isCallerSurvivingSpouse;
 		};
 
+		// This will hide the parent element if needed, and also hide any children elements
+		const hideRedundantFields = el => {
+			// Else should be fine, because if parent is hidden then subsequent children can't be hidden
+			if (el.classList.contains('js-hide-field')) {
+				el.classList.add('js-hidden');
+			} else {
+				const hiddenEls = [...el.querySelectorAll('.js-hide-field')];
+				hiddenEls.forEach(hiddenEl => {
+					hiddenEl.classList.add('js-hidden');
+				});
+			}
+		};
+
 		const checkEnteredValues = (input) => {
 			const type = input.dataset.type;
 			const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
@@ -106,20 +119,17 @@ const callerSetup = () => {
 
 			if (type === 'spouse') {
 				if (isCallerExecutorPostcodeEl.value) { // There is a postcode in the input, dont show the others
-					const hiddenSpouseFields = [...isSpouseOptions.querySelectorAll('.js-hide-field')];
-					hiddenSpouseFields.forEach(el => {
-						el.classList.add('js-hidden');
-					});
-					// isSpouseOptions.classList.add('js-hidden');
+					hideRedundantFields(isSpouseOptions);
 				}
 			} else {
 				if (isCallerSpousePostcodeEl.value) { // There is a postcode in the input, dont show the others
-					console.log(isCallerSpousePostcodeEl.value)
-					isExecutorOptions.classList.add('js-hidden');
+					hideRedundantFields(isExecutorOptions);
 				}
 			}
 		};
 
+		// The reason this is logic heavy is because im supporting two variations, an inline Q and an additional Q
+		// Im going to remove the inline Q cos there's too much logic behind that idea
 		el.addEventListener('change', e => {
 			const state = (e.target.value.toLowerCase() === 'yes');
 			if (e.target.dataset.type === 'spouse') {

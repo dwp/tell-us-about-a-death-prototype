@@ -42,7 +42,6 @@ $path: "/public/images/";
   @include button($grey-3);
 }
 
-.js-hidden-temp,
-.js-hide-field { // Move this somewhere else and sort logic out to use correct js
+.js-hidden-temp { // Move this somewhere else and sort logic out to use correct js
   display: none;
 }
