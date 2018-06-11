@@ -38,9 +38,11 @@
           </div>
 
           <div class="panel panel-border-narrow js-hidden" id="spouse-yes-panel">
-            <label class="form-label" for="spouse-yes-postcode">Postcode</label>
-            <input class="form-control form-control-1-4" id="spouse-yes-postcode" type="text" name="postcode">
-            <button class="button-secondary" href="#" role="button">Find address</button>
+            <div class="js-hide-field">
+              <label class="form-label" for="spouse-yes-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="spouse-yes-postcode" type="text" name="postcode">
+              <button class="button-secondary" href="#" role="button">Find address</button>
+            </div>
             <label class="form-label" for="spouse-yes-phone-number">National Insurance number</label>
             <input class="form-control" id="spouse-yes-phone-number" type="text" name="phone-number">
           </div>
@@ -53,9 +55,11 @@
             <label class="form-label-bold" for="first-name-2">Who is the surviving spouse?</label>
             <label class="form-label" for="full-name-spouse">Full name</label>
             <input class="form-control" id="full-name-spouse" type="text" name="full-name">
-            <label class="form-label" for="spouse-no-postcode">Postcode</label>
-            <input class="form-control form-control-1-4" id="spouse-no-postcode" type="text" name="postcode">
-            <button class="button-secondary" href="#" role="button">Find address</button>
+            <div>
+              <label class="form-label" for="spouse-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="spouse-no-postcode" type="text" name="postcode">
+              <button class="button-secondary" href="#" role="button">Find address</button>
+            </div>
             <label class="form-label" for="spouse-no-phone-number">Phone number</label>
             <input class="form-control" id="spouse-no-phone-number" type="text" name="phone-number">
           </div>
@@ -88,9 +92,11 @@
             <label class="form-label-bold" for="executor">Executor’s details</label>
             <label class="form-label" for="full-name-executor">Full name</label>
             <input class="form-control" id="full-name-executor" type="text" name="full-name">
-            <label class="form-label" for="executor-no-postcode">Postcode</label>
-            <input class="form-control form-control-1-4" id="executor-no-postcode" type="text" name="postcode">
-            <button class="button-secondary" href="#" role="button">Find address</button>
+            <div class="js-hide-field">
+              <label class="form-label" for="executor-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="executor-no-postcode" type="text" name="postcode">
+              <button class="button-secondary" href="#" role="button">Find address</button>
+            </div>
             <label class="form-label" for="executor-no-phone-number">Phone number</label>
             <input class="form-control" id="executor-no-phone-number" type="text" name="phone-number">
           </div>

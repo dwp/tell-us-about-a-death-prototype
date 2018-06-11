@@ -97,18 +97,20 @@ const callerSetup = () => {
 			return !isCallerExecutor && !isCallerSurvivingSpouse;
 		};
 
-
 		const checkEnteredValues = (input) => {
 			const type = input.dataset.type;
-			console.log(input.dataset.type)
 			const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
 			const isCallerExecutorPostcodeEl = document.getElementById('executor-yes-postcode');
 			const isSpouseOptions = document.getElementById('spouse-yes-panel'); // rename these
 			const isExecutorOptions = document.getElementById('executor-yes-panel');
+
 			if (type === 'spouse') {
 				if (isCallerExecutorPostcodeEl.value) { // There is a postcode in the input, dont show the others
-					console.log(isCallerExecutorPostcodeEl.value)
-					isSpouseOptions.classList.add('js-hidden');
+					const hiddenSpouseFields = [...isSpouseOptions.querySelectorAll('.js-hide-field')];
+					hiddenSpouseFields.forEach(el => {
+						el.classList.add('js-hidden');
+					});
+					// isSpouseOptions.classList.add('js-hidden');
 				}
 			} else {
 				if (isCallerSpousePostcodeEl.value) { // There is a postcode in the input, dont show the others
