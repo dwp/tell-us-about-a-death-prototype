@@ -45,3 +45,13 @@ $path: "/public/images/";
 .js-hidden-temp { // Move this somewhere else and sort logic out to use correct js
   display: none;
 }
+
+.form-group {
+  .pick-address.panel {
+    margin-top: 10px;
+  }
+}
+
+.address-dropdown {
+  width: 100%;
+}

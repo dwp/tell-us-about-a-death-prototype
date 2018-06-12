@@ -104,10 +104,18 @@ const callerSetup = () => {
 		}
 	};
 
+	/*
+	 * @returns {boolean} whether the caller's details are required
+	 */
 	const shouldCaptureCallersDetails = () => {
 		return !isCallerExecutor && !isCallerSurvivingSpouse;
 	};
 
+	/*
+	 * Returns the relationship status
+	 * @param {el} input - The dom element of the changed input
+	 * Calls `hideRedundantFields` to update dom nodes
+	*/
 	const checkEnteredValues = (input) => {
 		const type = input.dataset.type;
 		const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
@@ -138,7 +146,7 @@ const callerSetup = () => {
 				if (separateCallerFormEl) {
 					separateCallerFormEl.classList.remove('js-hidden');
 				}
-			} else {
+			} else if (separateCallerFormEl) {
 				separateCallerFormEl.classList.add('js-hidden');
 				checkEnteredValues(e.target);
 			}
@@ -149,5 +157,16 @@ const callerSetup = () => {
 	[...document.querySelectorAll('[name="radio-contact-group-2"]')].forEach(el => toggleViews(el));
 }
 
+const postcodeLookupStub = () => {
+	const postcodeSearchEl = document.querySelectorAll('.js-postcode-lookup');
+	[...postcodeSearchEl].forEach(el => {
+		el.addEventListener('click', e => { // Not ideal, but prototype
+			e.preventDefault();
+			el.nextElementSibling.classList.remove('js-hidden');
+		});
+	})
+}
+
 relationshipSetup();
 callerSetup();
+postcodeLookupStub();
