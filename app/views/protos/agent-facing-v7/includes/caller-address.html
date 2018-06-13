@@ -34,7 +34,28 @@
           <details>
             <summary><span class="summary">Address not in the UK?</span></summary>
             <div class="panel panel-border-narrow">
-              <p>Manual address lookup would go here.</p>
+              <div class="form-group">
+                <label class="form-label" for="caller-line-1">
+                  Building and street <span class="visually-hidden">line 1 of 2</span>
+                </label>
+                <input class="form-control" id="caller-line-1" type="text" name="line-1">
+              </div>
+              <div class="form-group">
+                <label class="visually-hidden">Building and street line 2 of 2</label>
+                <input class="form-control" id="caller-building-street" type="text" name="building-street">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="caller-town-city">Town or city</label>
+                <input class="form-control" id="caller-town-city" type="text" name="town-city">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="caller-county">County</label>
+                <input class="form-control" id="caller-county" type="text" name="county">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="caller-postcode">Postcode</label>
+                <input class="form-control" id="caller-postcode" type="text" name="postcode">
+              </div>
             </div>
           </details>
         </div>
@@ -89,7 +110,28 @@
                 <details>
                   <summary><span class="summary">Address not in the UK?</span></summary>
                   <div class="panel panel-border-narrow">
-                    <p>Manual address lookup would go here.</p>
+                    <div class="form-group">
+                      <label class="form-label" for="spouse-line-1">
+                        Building and street <span class="visually-hidden">line 1 of 2</span>
+                      </label>
+                      <input class="form-control" id="spouse-line-1" type="text" name="line-1">
+                    </div>
+                    <div class="form-group">
+                      <label class="visually-hidden">Building and street line 2 of 2</label>
+                      <input class="form-control" id="spouse-building-street" type="text" name="building-street">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="spouse-town-city">Town or city</label>
+                      <input class="form-control" id="spouse-town-city" type="text" name="town-city">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="spouse-county">County</label>
+                      <input class="form-control" id="spouse-county" type="text" name="county">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="spouse-postcode">Postcode</label>
+                      <input class="form-control" id="spouse-postcode" type="text" name="postcode">
+                    </div>
                   </div>
                 </details>
               </div>
@@ -117,6 +159,8 @@
               <label class="form-label-bold" for="executor">Executor’s details</label>
               <label class="form-label" for="full-name-executor">Full name</label>
               <input class="form-control" id="full-name-executor" type="text" name="full-name">
+              <label class="form-label" for="executor-no-phone-number">Phone number</label>
+              <input class="form-control" id="executor-no-phone-number" type="text" name="phone-number">
               <div class="js-hide-field form-group">
                 <label class="form-label" for="executor-no-postcode">Postcode</label>
                 <input class="form-control form-control-1-4" id="executor-no-postcode" type="text" name="postcode">
@@ -130,14 +174,33 @@
                   </select>
                 </div>
                 <details>
-                    <summary><span class="summary">Address not in the UK?</span></summary>
-                    <div class="panel panel-border-narrow">
-                      <p>Manual address lookup would go here.</p>
+                  <summary><span class="summary">Address not in the UK?</span></summary>
+                  <div class="panel panel-border-narrow">
+                    <div class="form-group">
+                      <label class="form-label" for="executor-line-1">
+                        Building and street <span class="visually-hidden">line 1 of 2</span>
+                      </label>
+                      <input class="form-control" id="executor-line-1" type="text" name="line-1">
                     </div>
-                  </details>
+                    <div class="form-group">
+                      <label class="visually-hidden">Building and street line 2 of 2</label>
+                      <input class="form-control" id="executor-building-street" type="text" name="building-street">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="executor-town-city">Town or city</label>
+                      <input class="form-control" id="executor-town-city" type="text" name="town-city">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="executor-county">County</label>
+                      <input class="form-control" id="executor-county" type="text" name="county">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="executor-postcode">Postcode</label>
+                      <input class="form-control" id="executor-postcode" type="text" name="postcode">
+                    </div>
+                  </div>
+                </details>
               </div>
-              <label class="form-label" for="executor-no-phone-number">Phone number</label>
-              <input class="form-control" id="executor-no-phone-number" type="text" name="phone-number">
             </div>
           </fieldset>
         </div>
