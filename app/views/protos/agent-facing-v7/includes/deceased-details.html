@@ -12,16 +12,16 @@
           </legend>
           <div class="form-date">
             <div class="form-group form-group-day">
-              <label class="form-label" for="dob-day">Day</label>
-              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+              <label class="form-label" for="deceased-dob-day">Day</label>
+              <input class="form-control" id="deceased-dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
             </div>
             <div class="form-group form-group-month">
-              <label class="form-label" for="dob-month">Month</label>
-              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              <label class="form-label" for="deceased-dob-month">Month</label>
+              <input class="form-control" id="deceased-dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
             </div>
             <div class="form-group form-group-year">
-              <label class="form-label" for="dob-year">Year</label>
-              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+              <label class="form-label" for="deceased-dob-year">Year</label>
+              <input class="form-control" id="deceased-dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
             </div>
           </div>
         </fieldset>
@@ -34,10 +34,10 @@
             <label for="hospital-yes">Yes</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="hospital-yes-panel">
-            <label class="form-label" for="hospital-yes-phone-number">Which hospital?</label>
-            <input class="form-control" id="hospital-yes-phone-number" type="text" name="phone-number">
-            <label class="form-label" for="phone-number">How long were they in hospital?</label>
-            <input class="form-control form-control-1-4" id="phone-number" type="text" name="phone-number">
+            <label class="form-label" for="hospital-yes-hospital">Which hospital?</label>
+            <input class="form-control" id="hospital-yes-hospital" type="text" name="hospital">
+            <label class="form-label" for="hospital-yes-length">How long were they in hospital?</label>
+            <input class="form-control form-control-1-4" id="hospital-yes-length" type="text" name="hospital-yes-length">
           </div>
 
           <div class="multiple-choice" data-target="hospital-no-panel">
@@ -45,10 +45,45 @@
             <label for="hospital-no">No</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="hospital-no-panel">
-            <label class="form-label-bold" for="death-location">Where did they die?</label>
-            <label class="form-label" for="spouse-yes-postcode">Postcode</label>
-            <input class="form-control form-control-1-4" id="spouse-yes-postcode" type="text" name="postcode">
-            <button class="button-secondary" href="#" role="button">Find address</a>
+            <label class="form-label-bold" for="hospital-no-postcode">Where did they die?</label>
+            <label class="form-label" for="hospital-no-postcode">Postcode</label>
+            <input class="form-control form-control-1-4" id="hospital-no-postcode" type="text" name="postcode">
+            <button class="button-secondary js-postcode-lookup" role="button">Find address</button>
+            <div class="panel panel-border-narrow form-group js-hidden pick-address">
+              <label class="form-label-bold" for="hospital-no-pick-address">
+                Select an address
+              </label>
+              <select class="form-control address-dropdown" id="hospital-no-pick-address">
+                <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+              </select>
+            </div>
+            <details>
+              <summary><span class="summary">Address not in the UK?</span></summary>
+              <div class="panel panel-border-narrow">
+                <div class="form-group">
+                  <label class="form-label" for="hospital-no-line-1">
+                    Building and street <span class="visually-hidden">line 1 of 2</span>
+                  </label>
+                  <input class="form-control" id="hospital-no-line-1" type="text" name="line-1">
+                </div>
+                <div class="form-group">
+                  <label class="visually-hidden">Building and street line 2 of 2</label>
+                  <input class="form-control" id="hospital-no-building-street" type="text" name="building-street">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hospital-no-town-city">Town or city</label>
+                  <input class="form-control" id="hospital-no-town-city" type="text" name="town-city">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hospital-no-county">County</label>
+                  <input class="form-control" id="hospital-no-county" type="text" name="county">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="hospital-no-manual-postcode">Postcode</label>
+                  <input class="form-control" id="hospital-no-manual-postcode" type="text" name="postcode">
+                </div>
+              </div>
+            </details>
           </div>
         </fieldset>
       </div>
@@ -64,9 +99,44 @@
             <label for="same-address-no">No</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="same-address-no-panel">
-            <label class="form-label" for="postcode">Postcode</label>
-            <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
-            <button class="button-secondary" href="#" role="button">Find address</a>
+            <label class="form-label" for="same-address-postcode">Postcode</label>
+            <input class="form-control form-control-1-4" id="same-address-postcode" type="text" name="postcode">
+            <button class="button-secondary js-postcode-lookup" role="button">Find address</button>
+            <div class="panel panel-border-narrow form-group js-hidden pick-address">
+              <label class="form-label-bold" for="not-caller-pick-address">
+                Select an address
+              </label>
+              <select class="form-control address-dropdown" id="not-caller-pick-address">
+                <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+              </select>
+            </div>
+            <details>
+              <summary><span class="summary">Address not in the UK?</span></summary>
+              <div class="panel panel-border-narrow">
+                <div class="form-group">
+                  <label class="form-label" for="not-caller-line-1">
+                    Building and street <span class="visually-hidden">line 1 of 2</span>
+                  </label>
+                  <input class="form-control" id="not-caller-line-1" type="text" name="line-1">
+                </div>
+                <div class="form-group">
+                  <label class="visually-hidden">Building and street line 2 of 2</label>
+                  <input class="form-control" id="not-caller-building-street" type="text" name="building-street">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="not-caller-town-city">Town or city</label>
+                  <input class="form-control" id="not-caller-town-city" type="text" name="town-city">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="not-caller-county">County</label>
+                  <input class="form-control" id="not-caller-county" type="text" name="county">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="not-caller-postcode">Postcode</label>
+                  <input class="form-control" id="not-caller-postcode" type="text" name="postcode">
+                </div>
+              </div>
+            </details>
           </div>
         </fieldset>
       </div>
