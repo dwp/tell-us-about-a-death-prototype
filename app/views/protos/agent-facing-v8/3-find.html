@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% set agent = true %}
+
+{% block page_title %}
+Tell us about a death
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+
+  <br>
+  <nav class="nav-bar2">
+    <ul>
+      <li>
+        <a href="1-start" class="">New notification</a>
+      </li>
+      <li>
+        <a href="#" class="active">Find notification</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-medium">Find notification</h1>
+
+
+      <form autocomplete="off">
+          <div class="form-group search-group ">
+            <label for="search-box" class="form-label">
+              <span>Enter the deceased’s National Insurance number</span>
+            </label>
+            <input type="search" name="findNino" class="form-control form-control-search" id="search-box" autocomplete="off" value="">
+            <a class="button-search" href="4-found" role="button"><span class="visually-hidden">Search</span></a>
+          </div>
+        </form>
+    </div>
+  </div>
+
+</main>
+
+{% endblock %}

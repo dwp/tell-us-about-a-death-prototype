@@ -167,6 +167,42 @@ const postcodeLookupStub = () => {
 	})
 }
 
+const addAnotherItem = () => {
+	const buttons = [...document.querySelectorAll('.js-add-another-btn')];
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			const frag = document.createDocumentFragment();
+
+			const input = document.createElement('input');
+			input.classList.add('form-control');
+
+			const label = document.createElement('label');
+			label.classList.add('form-label');
+			label.innerText = 'Vehicle Registration';
+
+			const back = document.createElement('a'); // text button, not a
+			back.href = '#';
+			back.innerText = 'Remove this';
+			back.classList.add('remove-link');
+
+			back.addEventListener('click', e => {
+				e.preventDefault();
+				back.parentElement.remove();
+			});
+
+			const formGroup = document.createElement('div');
+			formGroup.classList.add('form-group');
+			formGroup.appendChild(label);
+			formGroup.appendChild(input);
+			formGroup.appendChild(back);
+			frag.appendChild(formGroup);
+			button.parentElement.querySelector('.js-template').appendChild(frag);
+			// document.getElementById('test').appendChild(frag);
+		});
+	});
+};
+
 relationshipSetup();
 callerSetup();
 postcodeLookupStub();
+addAnotherItem();
