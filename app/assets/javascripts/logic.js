@@ -84,4 +84,89 @@ const relationshipSetup = () => {
 	}
 }
 
+const callerSetup = () => {
+	// Second version of this
+	const separateCallerFormEl = document.getElementById('caller-form');
+
+	let isCallerSurvivingSpouse = true; // ...Need a better way to do this, dont want to swap types but we need a false, and dont want to negate the var
+	let isCallerExecutor = true;
+
+	// This will hide the parent element if needed, and also hide any children elements
+	const hideRedundantFields = el => {
+		// Else should be fine, because if parent is hidden then subsequent children can't be hidden
+		if (el.classList.contains('js-hide-field')) {
+			el.classList.add('js-hidden');
+		} else {
+			const hiddenEls = [...el.querySelectorAll('.js-hide-field')];
+			hiddenEls.forEach(hiddenEl => {
+				hiddenEl.classList.add('js-hidden');
+			});
+		}
+	};
+
+	/*
+	 * @returns {boolean} whether the caller's details are required
+	 */
+	const shouldCaptureCallersDetails = () => {
+		return !isCallerExecutor && !isCallerSurvivingSpouse;
+	};
+
+	/*
+	 * Returns the relationship status
+	 * @param {el} input - The dom element of the changed input
+	 * Calls `hideRedundantFields` to update dom nodes
+	*/
+	const checkEnteredValues = (input) => {
+		const type = input.dataset.type;
+		const isCallerSpousePostcodeEl = document.getElementById('spouse-yes-postcode');
+		const isCallerExecutorPostcodeEl = document.getElementById('executor-yes-postcode');
+		const isSpouseOptions = document.getElementById('spouse-yes-panel'); // rename these
+		const isExecutorOptions = document.getElementById('executor-yes-panel');
+
+		if (type === 'spouse') {
+			if (isCallerExecutorPostcodeEl.value) { // There is a postcode in the input, dont show the others
+				hideRedundantFields(isSpouseOptions);
+			}
+		} else {
+			if (isCallerSpousePostcodeEl.value) { // There is a postcode in the input, dont show the others
+				hideRedundantFields(isExecutorOptions);
+			}
+		}
+	};
+
+	const toggleViews = el => {
+		el.addEventListener('change', e => {
+			const state = (e.target.value.toLowerCase() === 'yes');
+			if (e.target.dataset.type === 'spouse') {
+				isCallerSurvivingSpouse = state;
+			} else {
+				isCallerExecutor = state;
+			}
+			if (shouldCaptureCallersDetails()) {
+				if (separateCallerFormEl) {
+					separateCallerFormEl.classList.remove('js-hidden');
+				}
+			} else if (separateCallerFormEl) {
+				separateCallerFormEl.classList.add('js-hidden');
+				checkEnteredValues(e.target);
+			}
+		});
+	}
+
+	[...document.querySelectorAll('[name="radio-contact-group-1"]')].forEach(el => toggleViews(el));
+	[...document.querySelectorAll('[name="radio-contact-group-2"]')].forEach(el => toggleViews(el));
+}
+
+const postcodeLookupStub = () => {
+	const postcodeSearchEl = document.querySelectorAll('.js-postcode-lookup');
+	[...postcodeSearchEl].forEach(el => {
+		el.addEventListener('click', e => { // Not ideal, but prototype
+			e.preventDefault();
+			el.nextElementSibling.classList.remove('js-hidden');
+		});
+	})
+}
+
 relationshipSetup();
+callerSetup();
+postcodeLookupStub();
