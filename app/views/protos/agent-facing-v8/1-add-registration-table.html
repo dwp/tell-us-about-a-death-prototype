@@ -1,0 +1,53 @@
+{% extends "layout.html" %} {% set agent = true %} {% block page_title %} Tell us about a death {% endblock %} {% block content
+  %} {% include "includes/blue-banner.html" %}
+
+  <main id="content" role="main">
+    <br>
+    <nav class="nav-bar2">
+      <ul>
+        <li>
+          <a href="#" class="active">New notification</a>
+        </li>
+        <li>
+          <a href="3-find" class="">Find notification</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <br>
+        <!-- start Tabs -->
+        <div class="tabs">
+          <div class="tabs-nav">
+            <ul class="tabs-list">
+              <li>
+                <a href="#tab-1">
+                  Caller
+                </a>
+              </li>
+              <li>
+                <a id="tabButton-2" href="#tab-2">
+                  Deceased trace
+                </a>
+              </li>
+              <li>
+                <a id="tabButton-3" href="#tab-3">
+                  Deceased’s personal details
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="tabs-content">
+            {% include "protos/agent-facing-v8/includes/deceased-details-table.html" %}
+            {% include "protos/agent-facing-v8/includes/caller-address.html" %}
+            {% include "protos/agent-facing-v8/includes/deceased-trace.html" %}
+          </div>
+        </div>
+      </div>
+      <!-- end Tabs -->
+    </div>
+  </main>
+
+  {% endblock %}

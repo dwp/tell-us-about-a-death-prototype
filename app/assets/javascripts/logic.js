@@ -202,7 +202,52 @@ const addAnotherItem = () => {
 	});
 };
 
+const addAnotherItemTable = () => {
+	const buttons = [...document.querySelectorAll('.js-add-another-btn-table')];
+	const regInput = document.getElementById('vehicle-reg');
+	const regTable = document.getElementById('vehicle-reg-table');
+
+	const toggleTable = () => {
+		console.log(regTable.childElementCount)
+		if (regTable.childElementCount) {
+			regTable.parentElement.classList.remove('js-hidden');
+		} else {
+			regTable.parentElement.classList.add('js-hidden');
+		}
+	};
+
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			const frag = document.createDocumentFragment();
+			const tr = document.createElement('tr');
+			const tdReg = document.createElement('td');
+			tdReg.innerText = regInput.value;
+
+			const tdBack = document.createElement('td');
+			const back = document.createElement('a'); // text button, not a
+			back.href = '#';
+			back.innerText = 'Remove this';
+			back.classList.add('remove-link');
+
+			back.addEventListener('click', e => {
+				e.preventDefault();
+				tdBack.parentElement.remove();
+				toggleTable();
+			});
+
+			tdBack.appendChild(back);
+			tr.appendChild(tdReg);
+			tr.appendChild(tdBack);
+			frag.appendChild(tr);
+			regTable.appendChild(frag);
+			regInput.value = '';
+			toggleTable();
+		});
+	});
+};
+
 relationshipSetup();
 callerSetup();
 postcodeLookupStub();
 addAnotherItem();
+addAnotherItemTable();
