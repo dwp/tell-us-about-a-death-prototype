@@ -1,37 +1,31 @@
-{% extends "layout-index.html" %}
-
-{% block page_title %}
-  GOV.UK prototype kit
-{% endblock %}
-
-{% block content %}
+{% extends "layout-index.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
 <div class="homepage-top">
-  <div class="homepage-top-content">
-    <h1 class="heading-xlarge">
-      {{serviceName}}
-      <span>Prototypes</span>
-    </h1>
-  </div>
+	<div class="homepage-top-content">
+		<h1 class="heading-xlarge">
+			{{serviceName}}
+			<span>Prototypes</span>
+		</h1>
+	</div>
 </div>
 
 <main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
-	{# Start of most recent box #}
-    	<div class="most-recent">
-			{# Start of prototype write up #}
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			{# Start of most recent box #}
+			<div class="most-recent">
+				{# Start of prototype write up #}
 				<div class="prototype-write-up">
 					<div class="grid-row">
 						<div class="column-one-third">
 							<dl>
 								<dt class="heading-small">Date of release</dt>
-								<dd>May 2018</dd>
+								<dd>June 2018</dd>
 							</dl>
 						</div>
 						<div class="column-one-third">
 							<dl>
 								<dt class="heading-small">Version</dt>
-								<dd>Agent-facing v3</dd>
+								<dd>Agent-facing v8</dd>
 							</dl>
 						</div>
 						<div class="column-one-third">
@@ -43,8 +37,70 @@
 					</div>
 
 					<h3 class="heading-small">Overview</h3>
-					<p>Amends to the prototype based on findings following user research session with telephony colleagues. </p>
+					<p>Amends to the prototype based on possible edge cases.</p>
 					<h3 class="heading-small">Changes</h3>
+					<ul class="list list-bullet">
+						<li>Caller tab: Entering relationship to deceased will fill in the deceased's marital status if applicable.</li>
+						<li>Caller tab: Remove option to select marital status as a security option if the above occurs</li>
+						<li>Caller tab: Added a new address input with postcode lookup</li>
+						<li>Caller tab: Removed address from "is caller last survining spouse" and "is caller executor" in favour of the above</li>
+						<li>Caller tab: Removed Phone Number from "is caller executor"</li>
+						<li>Deceased details tab: add an option to enter vehicle registrations into a table</li>
+					</ul>
+					<h3 class="heading-small">Hypotheses</h3>
+					<ul class="list list-bullet">
+						<li>Allow the agent to add repeated data in one place and remove possible repetition in the discussion with the caller.</li>
+					</ul>
+					<h3 class="heading-small">Research notes</h3>
+					<ul class="list list-bullet">
+						<li>Not yet tested</li>
+					</ul>
+					<h3 class="heading-small">Variations</h3>
+					<ul class="list list-bullet">
+						<li><a href="/protos/agent-facing-v8/1-add-registration-table">Vehicle Registration Table prototype</a></li>
+						<li><a href="/protos/agent-facing-v8/1-add-registration">Vehicle Registration Input prototype</a></li>
+						<li><a href="/protos/agent-facing-v8/1-no-registration">Vehicle Registration No Input prototype</a></li>
+					</ul>
+					<a href="/protos/agent-facing-v8/1-add-registration-table" class="button button-start">View prototype</a>
+				</div>
+				{# End of prototype write up #}
+			</div>
+			{# End of most recent box #}
+
+			<h2 class="heading-large">All versions</h2>
+			{# Start of hidden panel #}
+			<details>
+				<summary>
+					<span class="summary">Show all versions</span>
+				</summary>
+
+				<div class="panel panel-border-narrow">
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>May 2018</dd>
+								</dl>
+							</div>
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Version</dt>
+									<dd>Agent-facing v3</dd>
+								</dl>
+							</div>
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd></dd>
+								</dl>
+							</div>
+						</div>
+
+						<h3 class="heading-small">Overview</h3>
+						<p>Amends to the prototype based on findings following user research session with telephony colleagues. </p>
+						<h3 class="heading-small">Changes</h3>
 						<ul class="list list-bullet">
 							<li>Caller tab: amend to hint text to reflect Leaflet code position change</li>
 							<li>Caller tab: Change NOK to ‘surviving spouse’</li>
@@ -54,125 +110,120 @@
 							<li>Deceased tab: add capture for Driving licence and Passport</li>
 							<li>Other information tab: removed tab and moved info as above</li>
 						</ul>
-					<h3 class="heading-small">Hypotheses</h3>
+						<h3 class="heading-small">Hypotheses</h3>
 						<ul class="list list-bullet">
 							<li>Users will prefer a flexible approach to data capture &ndash; reflecting the organic nature of telephone calls.</li>
 						</ul>
-					<h3 class="heading-small">Research notes</h3>
-					<ul class="list list-bullet">
-						<li>Not yet tested</li>
-					</ul>
-					<a href="/protos/agent-facing-v3/1-start" class="button button-start">View prototype</a>
+						<h3 class="heading-small">Research notes</h3>
+						<ul class="list list-bullet">
+							<li>Not yet tested</li>
+						</ul>
+						<a href="/protos/agent-facing-v3/1-start" class="button button-start">View prototype</a>
+					</div>
+					{# End of prototype write up #}
 				</div>
-				{# End of prototype write up #}
-			</div>
-			{# End of most recent box #}
 
-      		<h2 class="heading-large">All versions</h2>
-			{# Start of hidden panel #}
-			<details>
-				<summary><span class="summary">Show all versions</span></summary>
+				<hr />
 
 				<div class="panel panel-border-narrow">
-						{# Start of prototype write up #}
-				<div class="prototype-write-up">
-					<div class="grid-row">
-						<div class="column-one-third">
-							<dl>
-								<dt class="heading-small">Date of release</dt>
-								<dd>April&ndash;May 2018</dd>
-							</dl>
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>April&ndash;May 2018</dd>
+								</dl>
+							</div>
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Version</dt>
+									<dd>Agent-facing</dd>
+								</dl>
+							</div>
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd></dd>
+								</dl>
+							</div>
 						</div>
-						<div class="column-one-third">
-							<dl>
-								<dt class="heading-small">Version</dt>
-								<dd>Agent-facing</dd>
-							</dl>
-						</div>
-						<div class="column-one-third">
-							<dl>
-								<dt class="heading-small">Related stories</dt>
-								<dd></dd>
-							</dl>
-						</div>
-					</div>
 
-					<h3 class="heading-small">Changes</h3>
-					<p>Following several co-creation workshops and paper prototyping sessions with telephony colleagues, this represents the first digital iteration of the Agent-facing MVP.</p>
-					<h3 class="heading-small">Features</h3>
+						<h3 class="heading-small">Changes</h3>
+						<p>Following several co-creation workshops and paper prototyping sessions with telephony colleagues, this represents the
+							first digital iteration of the Agent-facing MVP.</p>
+						<h3 class="heading-small">Features</h3>
 						<ul class="list list-bullet">
-							<li>Navigation for capturing New notification and for finding an existing notification</li> 
-							<li>New notification data capture features tabs to separate content</li> 
+							<li>Navigation for capturing New notification and for finding an existing notification</li>
+							<li>New notification data capture features tabs to separate content</li>
 							<li>‘Check answers’ page allows the Agent to go back and edit content as required before submitting</li>
 							<li>‘Find notification’ feature purpose for after-call work only at this stage &ndash; intentionally designed to be read-only</li>
 						</ul>
-					<h3 class="heading-small">Hypotheses</h3>
+						<h3 class="heading-small">Hypotheses</h3>
 						<ul class="list list-bullet">
 							<li>Users will prefer a flexible approach to data capture &ndash; reflecting the organic nature of telephone calls.</li>
 						</ul>
-					<h3 class="heading-small">Research notes</h3>
-					<ul class="list list-bullet">
-						<li>‘New notification’ flow tested with Agents from both TUO and DWP Bereavement services at Tyne View Park, 02/05/2018.</li>
-					</ul>
-					<a href="/protos/agent-facing-v2/1-start" class="button button-start">View prototype</a>
-				</div>
-				{# End of prototype write up #}
+						<h3 class="heading-small">Research notes</h3>
+						<ul class="list list-bullet">
+							<li>‘New notification’ flow tested with Agents from both TUO and DWP Bereavement services at Tyne View Park, 02/05/2018.</li>
+						</ul>
+						<a href="/protos/agent-facing-v2/1-start" class="button button-start">View prototype</a>
 					</div>
+					{# End of prototype write up #}
+				</div>
 
-					<hr />
+				<hr />
 
 				<div class="panel panel-border-narrow">
-				{# Start of prototype write up #}
-				<div class="prototype-write-up">
-					<div class="grid-row">
-						<div class="column-one-third">
-							<dl>
-								<dt class="heading-small">Date of release</dt>
-								<dd>March 2018</dd>
-							</dl>
+					{# Start of prototype write up #}
+					<div class="prototype-write-up">
+						<div class="grid-row">
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Date of release</dt>
+									<dd>March 2018</dd>
+								</dl>
+							</div>
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Feature</dt>
+									<dd>End Verify</dd>
+								</dl>
+							</div>
+							<div class="column-one-third">
+								<dl>
+									<dt class="heading-small">Related stories</dt>
+									<dd></dd>
+								</dl>
+							</div>
 						</div>
-						<div class="column-one-third">
-							<dl>
-								<dt class="heading-small">Feature</dt>
-								<dd>End Verify</dd>
-							</dl>
-						</div>
-						<div class="column-one-third">
-							<dl>
-								<dt class="heading-small">Related stories</dt>
-								<dd></dd>
-							</dl>
-						</div>
-					</div>
 
-					<h3 class="heading-small">Changes</h3>
-					<p>In this version, we created a prototype to reflect recent conversations around security; specifically
-						trust and disclosure. We placed GOV Verify links at the end, together with the option to take a
-						unique reference number to a Registrar to prove identity prior to receiving playback from the system.</p>
-					<p>Changes from previous versions;
-						<ul class="list list-bullet">
-							<li>Start page features soft intro paragraph, exanded list of government services and actions,
-								&amp; a note on proving identity later in the process</li>
-							<li>Relationship to deceased status is an open text field</li>
-							<li>Notification complete stage features a unique reference number</li>
-							<li>The end list of system actions is hidden behind mandatory proof of identity methods</li>
-						</ul>
-					</p>
-					<h3 class="heading-small">Hypotheses</h3>
+						<h3 class="heading-small">Changes</h3>
+						<p>In this version, we created a prototype to reflect recent conversations around security; specifically trust and disclosure.
+							We placed GOV Verify links at the end, together with the option to take a unique reference number to a Registrar to
+							prove identity prior to receiving playback from the system.</p>
+						<p>Changes from previous versions;
+							<ul class="list list-bullet">
+								<li>Start page features soft intro paragraph, exanded list of government services and actions, &amp; a note on proving
+									identity later in the process</li>
+								<li>Relationship to deceased status is an open text field</li>
+								<li>Notification complete stage features a unique reference number</li>
+								<li>The end list of system actions is hidden behind mandatory proof of identity methods</li>
+							</ul>
+						</p>
+						<h3 class="heading-small">Hypotheses</h3>
 						<ul class="list list-bullet">
 							<li>Users would prefer the open text field for setting relationship status</li>
-							<li>People might abandon process at Verify stage even though they expect/want to receive 
-							disclosure at the end.</li>
+							<li>People might abandon process at Verify stage even though they expect/want to receive disclosure at the end.</li>
 						</ul>
-					<h3 class="heading-small">Research notes</h3>
-					<p>Research notes to follow.</p>
-					<a href="/protos/end-verify/1-start" class="button button-start">View prototype</a>
+						<h3 class="heading-small">Research notes</h3>
+						<p>Research notes to follow.</p>
+						<a href="/protos/end-verify/1-start" class="button button-start">View prototype</a>
+					</div>
+					{# End of prototype write up #}
 				</div>
-				{# End of prototype write up #}
-			</div>
 
-			<hr />
-				
+				<hr />
 				<div class="panel panel-border-narrow">
 					{# Start of prototype write up #}
 					<div class="prototype-write-up">
@@ -197,9 +248,8 @@
 							</div>
 						</div>
 						<h3 class="heading-small">Changes</h3>
-						<p>These sketched prototypes follow on from the UR work carried out in Newcastle
-						library. Tested with Registrar's, this version features the intentionally bloated
-						relationship status data ask.</p>
+						<p>These sketched prototypes follow on from the UR work carried out in Newcastle library. Tested with Registrar's, this
+							version features the intentionally bloated relationship status data ask.</p>
 						<p>Changes to the previous sketches;
 							<ul class="list list-bullet">
 								<li>Legal declaration on the start page</li>
@@ -208,9 +258,8 @@
 							</ul>
 						</p>
 						<h3 class="heading-small">Hypothesis</h3>
-						<p>We were looking to establish whether the legal declaration would have an impact on users.
-						We also wanted to provoke a discussion around relationship status - hence the intentionally 
-						unusable list shown in the prototype.</p>
+						<p>We were looking to establish whether the legal declaration would have an impact on users. We also wanted to provoke
+							a discussion around relationship status - hence the intentionally unusable list shown in the prototype.</p>
 						<h3 class="heading-small">Research notes</h3>
 						<p>Research notes to follow.</p>
 						<a href="https://projects.invisionapp.com/share/KBFYTCR2FPM#/screens" class="button button-start">View prototype</a>
@@ -244,9 +293,8 @@
 							</div>
 						</div>
 						<h3 class="heading-small">Changes</h3>
-						<p>In this version, we created the least technical back-end version a user
-							will encounter when accessing TUAAD. Assumes no real-time inter-departmental 
-							comms - reliant on GRO-CIS comms.</p>
+						<p>In this version, we created the least technical back-end version a user will encounter when accessing TUAAD. Assumes
+							no real-time inter-departmental comms - reliant on GRO-CIS comms.</p>
 						<p>The form-field actors are -
 							<ul class="list list-bullet">
 								<li>Alice &ndash; who will produce an immediate completion;</li>
@@ -291,21 +339,19 @@
 							</div>
 						</div>
 						<h3 class="heading-small">Changes</h3>
-						<p>Prototypes to show how the screens will adapt depending on the data 
-						being fed into the system. Includes examples of GRO, PDS, and citizen 
-						feeds.</p>
-						<p>Also shows examples of how we might give the citizen the ability to edit 
-						the list of services.</p>
+						<p>Prototypes to show how the screens will adapt depending on the data being fed into the system. Includes examples of
+							GRO, PDS, and citizen feeds.
+						</p>
+						<p>Also shows examples of how we might give the citizen the ability to edit the list of services.</p>
 						<h3 class="heading-small">Hypothesis</h3>
-						<p>That access to other department's technology will allow us to feed back to
-							the citizen in a more tailored way. And that they should have the ability to 
-							amend the list of services if they see an omission.</p>
+						<p>That access to other department's technology will allow us to feed back to the citizen in a more tailored way. And
+							that they should have the ability to amend the list of services if they see an omission.</p>
 						<h3 class="heading-small">Research notes</h3>
 						<p>Created prior to UR involvement.</p>
 						<a href="/tuaad-index" class="button button-start">View prototypes</a>
 					</div>
 					{# End of prototype write up #}
-				</div>	
+				</div>
 
 				<hr />
 
@@ -335,15 +381,15 @@
 						<h3 class="heading-small">Changes</h3>
 						<p>Added more check pages to the process.</p>
 						<h3 class="heading-small">Hypothesis</h3>
-						<p>That citizens will want to check (and amend) information listed prior to
-							submitting.</p>
+						<p>That citizens will want to check (and amend) information listed prior to submitting.
+						</p>
 						<h3 class="heading-small">Research notes</h3>
 						<p>Created prior to UR involvement.</p>
 						<a href="/protos/urn-plus/urnplus-p1" class="button button-start">View prototype</a>
 					</div>
 					{# End of prototype write up #}
 				</div>
-				
+
 				<hr />
 
 				<div class="panel panel-border-narrow">
@@ -372,8 +418,7 @@
 						<h3 class="heading-small">Changes</h3>
 						<p>...</p>
 						<h3 class="heading-small">Hypothesis</h3>
-						<p>That citizens should be able to inform of a death using the minimum
-							amount of information possible (NINO).</p>
+						<p>That citizens should be able to inform of a death using the minimum amount of information possible (NINO).</p>
 						<h3 class="heading-small">Research notes</h3>
 						<p>Created prior to UR involvement.</p>
 
@@ -385,7 +430,7 @@
 			{# End of hidden panel #}
 
 		</div>
-  </div>
+	</div>
 </main>
 
 {% endblock %}

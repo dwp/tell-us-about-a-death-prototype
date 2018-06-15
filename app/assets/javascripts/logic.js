@@ -167,6 +167,87 @@ const postcodeLookupStub = () => {
 	})
 }
 
+const addAnotherItem = () => {
+	const buttons = [...document.querySelectorAll('.js-add-another-btn')];
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			const frag = document.createDocumentFragment();
+
+			const input = document.createElement('input');
+			input.classList.add('form-control');
+
+			const label = document.createElement('label');
+			label.classList.add('form-label');
+			label.innerText = 'Vehicle Registration';
+
+			const back = document.createElement('a'); // text button, not a
+			back.href = '#';
+			back.innerText = 'Remove this';
+			back.classList.add('remove-link');
+
+			back.addEventListener('click', e => {
+				e.preventDefault();
+				back.parentElement.remove();
+			});
+
+			const formGroup = document.createElement('div');
+			formGroup.classList.add('form-group');
+			formGroup.appendChild(label);
+			formGroup.appendChild(input);
+			formGroup.appendChild(back);
+			frag.appendChild(formGroup);
+			button.parentElement.querySelector('.js-template').appendChild(frag);
+			// document.getElementById('test').appendChild(frag);
+		});
+	});
+};
+
+const addAnotherItemTable = () => {
+	const buttons = [...document.querySelectorAll('.js-add-another-btn-table')];
+	const regInput = document.getElementById('vehicle-reg');
+	const regTable = document.getElementById('vehicle-reg-table');
+
+	const toggleTable = () => {
+		console.log(regTable.childElementCount)
+		if (regTable.childElementCount) {
+			regTable.parentElement.classList.remove('js-hidden');
+		} else {
+			regTable.parentElement.classList.add('js-hidden');
+		}
+	};
+
+	buttons.forEach(button => {
+		button.addEventListener('click', () => {
+			const frag = document.createDocumentFragment();
+			const tr = document.createElement('tr');
+			const tdReg = document.createElement('td');
+			tdReg.innerText = regInput.value;
+
+			const tdBack = document.createElement('td');
+			const back = document.createElement('a'); // text button, not a
+			back.href = '#';
+			back.innerText = 'Remove this';
+			back.classList.add('remove-link');
+
+			back.addEventListener('click', e => {
+				e.preventDefault();
+				tdBack.parentElement.remove();
+				toggleTable();
+			});
+
+			tdBack.appendChild(back);
+			tr.appendChild(tdReg);
+			tr.appendChild(tdBack);
+			frag.appendChild(tr);
+			regTable.appendChild(frag);
+			regInput.value = '';
+			toggleTable();
+		});
+	});
+};
+
 relationshipSetup();
 callerSetup();
 postcodeLookupStub();
+addAnotherItem();
+addAnotherItemTable();
