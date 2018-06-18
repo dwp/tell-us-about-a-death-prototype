@@ -37,6 +37,7 @@ $path: "/public/images/";
 @import 'tabs';
 @import 'find-a-payment-schedule';
 @import 'big-blue-button';
+@import "accessible-autocomplete";
 
 .button-secondary {
   @include button($grey-3);

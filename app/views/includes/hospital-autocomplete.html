@@ -1,0 +1,6 @@
+<select id="location-picker">
+  <option></option>
+  {% for item in hospitalResponse %}
+    <option value={{item.OrganisationCode}}>{{item.OrganisationName}}</option>
+  {% endfor %}
+</select>

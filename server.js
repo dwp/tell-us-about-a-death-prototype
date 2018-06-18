@@ -1,7 +1,6 @@
 // Core dependencies
 const crypto = require('crypto')
 const path = require('path')
-
 // NPM dependencies
 const bodyParser = require('body-parser')
 const browserSync = require('browser-sync')
@@ -17,7 +16,12 @@ const documentationRoutes = require('./docs/documentation_routes.js')
 const packageJson = require('./package.json')
 const routes = require('./app/routes.js')
 const utils = require('./lib/utils.js')
-
+const hospitals = require('./app/assets/javascripts/hospital.json');
+const hospitalResponse = hospitals.sort((a, b) => {
+  var textA = a.OrganisationName.toUpperCase();
+  var textB = b.OrganisationName.toUpperCase();
+  return (textA < textB) ? -1 : (textA > textB) ? 1 : 0;
+});
 const app = express()
 const documentationApp = express()
 dotenv.config()
@@ -118,6 +122,7 @@ app.locals.cookieText = config.cookieText
 app.locals.promoMode = promoMode
 app.locals.releaseVersion = 'v' + releaseVersion
 app.locals.serviceName = config.serviceName
+app.locals.hospitalResponse = hospitalResponse;
 
 // Support session data
 app.use(session({
