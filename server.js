@@ -1,7 +1,6 @@
 // Core dependencies
 const crypto = require('crypto')
 const path = require('path')
-const fs = require('fs');
 // NPM dependencies
 const bodyParser = require('body-parser')
 const browserSync = require('browser-sync')
