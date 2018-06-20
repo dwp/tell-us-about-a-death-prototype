@@ -1,72 +1,201 @@
 // scss-lint:enable IdSelector
 
 .nav-bar2 {
-    border-bottom: 1px solid $border-colour;
-    margin: auto;
+  border-bottom: 1px solid $border-colour;
+  margin: auto;
+  max-width: 960px;
+
+  ul {
+    @extend %contain-floats;
+
+    margin: 0 auto;
     max-width: 960px;
+  }
 
-    ul {
-      @extend %contain-floats;
+  li {
+    float: left;
+    list-style-type: none;
 
-      margin: 0 auto;
-      max-width: 960px;
-    }
-
-    li {
-      float: left;
-      list-style-type: none;
-
-      @include media(mobile) {
-        border: 0;
-        width: 100%;
-      }
-    }
-
-    a {
-      display: block;
-      padding: 15px;
-      text-decoration: none;
-
-      &:visited {
-        color: $link-colour;
-      }
-
-      &:hover {
-        background-color: $highlight-colour;
-      }
-    }
-
-    .active {
-      box-shadow: inset 0 -5px 0 0 $govuk-blue;
+    @include media(mobile) {
+      border: 0;
+      width: 100%;
     }
   }
 
-  .subnav {
-    border-bottom: 1px solid $border-colour;
-    max-width: 30em;
+  a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
 
-    ul {
-      @extend %contain-floats;
-
-      margin: 0 auto;
-      max-width: 960px;
+    &:visited {
+      color: $link-colour;
     }
 
-    li {
-      float: left;
-      list-style-type: none;
-      padding: 15px;
-
-      @include media(mobile) {
-        width: 100%;
-      }
-    }
-
-    a {
-      display: block;
-    }
-
-    .active {
-      box-shadow: inset 0 -5px 0 0 $govuk-blue;
+    &:hover {
+      background-color: $highlight-colour;
     }
   }
+
+  .active {
+    box-shadow: inset 0 -5px 0 0 $govuk-blue;
+  }
+}
+
+.subnav {
+  border-bottom: 1px solid $border-colour;
+  max-width: 30em;
+
+  ul {
+    @extend %contain-floats;
+
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  li {
+    float: left;
+    list-style-type: none;
+    padding: 15px;
+
+    @include media(mobile) {
+      width: 100%;
+    }
+  }
+
+  a {
+    display: block;
+  }
+
+  .active {
+    box-shadow: inset 0 -5px 0 0 $govuk-blue;
+  }
+}
+
+// Nav pattern https://dwp-design-examples.herokuapp.com/example/navigation-global
+
+@import 'colours';
+@import 'shims';
+
+#global-header-bar {
+  display: none;
+}
+
+.navigation-global {
+  background: $panel-colour;
+
+  ul {
+    @extend %contain-floats;
+
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  li {
+    float: left;
+    list-style-type: none;
+
+    @include media(mobile) {
+      width: 100%;
+    }
+  }
+
+  a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+
+    &:link,
+    &:visited {
+      color: $black;
+    }
+
+    &:active,
+    &:focus {
+      background-color: $focus-colour;
+      color: $black;
+    }
+
+    &:hover {
+      background-color: $highlight-colour;
+      text-decoration: underline;
+    }
+  }
+
+  .active {
+    background: $govuk-blue;
+    border-bottom: 0;
+    font-weight: 700;
+
+    &:link,
+    &:visited,
+    &:active {
+      color: $white;
+    }
+
+    &:focus {
+      color: $black;
+    }
+
+    &:hover {
+      background: $govuk-blue;
+      text-decoration: underline;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 0;
+    margin-top: 8.5px;
+  }
+
+  .search-item {
+    float: right;
+  }
+
+  .form-control-search {
+    height: 2em;
+    width: calc(100% - 38px); // I know browser support wouldn't make this viable for prod
+  }
+
+  .search-group {
+    padding: 0;
+  }
+
+  .button-search {
+    background: $govuk-blue url('/public/images/search-button.png') no-repeat center center;
+    background-position: 85% 50%;
+    background-size: 4.75em;
+    margin-right: 0;
+    padding: 0;
+    width: 2.375em;
+    height: 2.375em;
+
+    &:hover, &:focus {
+      cursor: pointer;
+      background-color: $link-hover-colour;
+    }
+  }
+}
+
+.header-proposition {
+  .search-form {
+    float: right;
+    width: 50%;
+  }
+  .form-control-search {
+    height: 2em;
+    border: 0;
+    width: calc(100% - 2em);
+  }
+
+  .button-search {
+    font-size: 19px;
+    height: 2em;
+    width: 2em;
+    margin: 0;
+    background-size: 4em;
+  }
+
+  .search-group {
+    margin: -6px 0 0;
+  }
+}
