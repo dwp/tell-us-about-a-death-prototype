@@ -1,29 +1,16 @@
-{% extends "layout.html" %} {% set agent = true %} {% block page_title %} Tell us about a death {% endblock %} {% block content
+{% extends "layout-top-nav.html" %} {% set agent = true %} {% block page_title %} Tell us about a death {% endblock %} {% block content
 %}
 
-
 <main id="content" role="main">
-  <br>
-  <nav class="nav-bar2">
-    <ul>
-      <li>
-        <a href="1-start" class="active">New notification</a>
-      </li>
-      <li>
-        <a href="3-find" class="">Existing notification</a>
-      </li>
-    </ul>
-  </nav>
-
   <div class="grid-row">
     <div class="column-two-thirds">
-      <h2 class="heading-medium">Check this information</h2>
+      <h1 class="heading-large">Check this information</h2>
       <p>You've collected details about the death of David Wood.</p>
       <h2 class="heading-medium">Caller’s details</h2>
-      <dl class="govuk-check-your-answers cya-questions-short">
+      <dl class="govuk-check-your-answers cya-questions-short" id="checkAnswers">
         <div>
           <dt class="cya-question">Name</dt>
-          <dd class="cya-answer">Hannah Wood</dd>
+          <dd class="cya-answer" data-prop="caller-full-name">Jane Doe</dd>
           <dd class="cya-change">
             <a href="/edit/caller/full-name">
               Change <span class="visually-hidden"> name</span>
@@ -32,7 +19,7 @@
         </div>
         <div>
           <dt class="cya-question">Leaflet code</dt>
-          <dd class="cya-answer">AB657C</dd>
+          <dd class="cya-answer" data-prop="caller-leaflet-code">AB657C</dd>
           <dd class="cya-change">
             <a href="/edit/caller/leaflet-code">
               Change <span class="visually-hidden"> Leaflet code</span>
@@ -41,7 +28,7 @@
         </div>
         <div>
           <dt class="cya-question">Relationship to deceased</dt>
-          <dd class="cya-answer">Wife</dd>
+          <dd class="cya-answer" data-prop="caller-relationship-to-deceased">Wife</dd>
           <dd class="cya-change">
             <a href="/edit/caller/relationship-to-deceased">
               Change <span class="visually-hidden"> Relationship to deceased</span>
@@ -51,9 +38,9 @@
         <div>
           <dt class="cya-question">Address</dt>
           <dd class="cya-answer">
-            72 Guild Street
-            <br /> London
-            <br /> SE23 6FH
+            123 Fake Street
+            <br /> Newcastle
+            <br /> NE24 444
           </dd>
           <dd class="cya-change">
             <a href="1-start">
@@ -63,7 +50,7 @@
         </div>
         <div>
           <dt class="cya-question">Phone number</dt>
-          <dd class="cya-answer">0207 555 189</dd>
+          <dd class="cya-answer" data-prop="caller-phone-number">01670 1234567</dd>
           <dd class="cya-change">
             <a href="/edit/caller/phone-number">
               Change <span class="visually-hidden">Phone number</span>
@@ -76,7 +63,7 @@
       <dl class="govuk-check-your-answers cya-questions-short">
         <div>
           <dt class="cya-question">Name</dt>
-          <dd class="cya-answer">David Wood</dd>
+          <dd class="cya-answer" data-prop="deceased-full-name">David Wood</dd>
           <dd class="cya-change">
             <a href="/edit/deceased/full-name">
               Change <span class="visually-hidden"> name</span>
@@ -85,7 +72,7 @@
         </div>
         <div>
           <dt class="cya-question">Date of birth</dt>
-          <dd class="cya-answer">5 January 1954</dd>
+          <dd class="cya-answer" data-prop="deceased-date-of-birth">5 January 1954</dd>
           <dd class="cya-change">
             <a href="/edit/deceased/date-of-birth">
               Change <span class="visually-hidden"> date of birth</span>

@@ -1,6 +1,6 @@
 $(function() {
 	const relationshipSetup = () => {
-		const relationship = document.getElementById('relationship');
+		const relationship = document.getElementById('caller-relationship');
 
 		// Adjective form of marital status, Probably need to account for typos, different variations
 		const maritalStatuses = ['married', 'single', 'divorced', 'widowed', 'civilpartnership'];
@@ -247,13 +247,31 @@ $(function() {
 		});
 	};
 
+	/*
+	 * Get an answer from query string and update the change page whilst there's no server rendered page
+	*/
+	const checkAnswers = () => {
+		const checkAnswersEl = document.getElementById('checkAnswers');
+		if (checkAnswersEl) {
+			// This would be on server and handled at route level but proto
+			const params = location.search.slice(1).split('=');
+			const targetEl = document.querySelector(`[data-prop="${params[0]}"]`);
+			targetEl.innerText = params[1].replace('+', ' ');
+		}
+		return false;
+	};
+
 	relationshipSetup();
 	callerSetup();
 	postcodeLookupStub();
 	addAnotherItem();
 	addAnotherItemTable();
+	checkAnswers();
 
-	accessibleAutocomplete.enhanceSelectElement({
-		selectElement: document.querySelector('#location-picker')
-	})
+	const hospitalLocation = document.getElementById('location-picker');
+	if (hospitalLocation) {
+		accessibleAutocomplete.enhanceSelectElement({
+			selectElement: hospitalLocation
+		});
+	}
 });

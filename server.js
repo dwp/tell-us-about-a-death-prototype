@@ -192,6 +192,51 @@ app.get('/prototype-admin/download-latest', function (req, res) {
   res.redirect(url)
 })
 
+const validPrefixes = ['caller', 'deceased', 'surviving-spouse', 'executor'];
+
+/*
+ * @param {array} path - each segment of the current edit url
+ * @returns {string} - the prefix, if valid
+ */
+const generatePrefix = (path => validPrefixes.includes(path[0]) ? path[0] : '');
+
+/*
+ * @param {string} path - The path of the current edit url
+ * @returns {object} values needed to create a valid edit page
+ */
+const generateFields = (params) => {
+  const splitPath = params.split('/');
+  let field = splitPath[0];
+
+  if (splitPath.length > 1) { // We can safely assume the url had multiple path segments
+    field = splitPath[1];
+  }
+
+  return {
+    prefix: generatePrefix(splitPath),
+    fieldName: utils.translate(splitPath.join('-')),
+    field
+  };
+};
+
+// Dynamically create editable fields as a page route, serve up the include in a template layout
+app.get('/edit*', (req, res) => {
+  const { prefix, fieldName, field } = generateFields(req.params[0].replace('/', ''));
+  app.locals.editableField = field;
+  app.locals.fieldName = fieldName;
+  app.locals.prefix = prefix;
+
+  res.set('Content-Type', 'text/html');
+  // Always serve this page, that page will then serve up the field inside - should be robust enough?
+  res.render('includes/fields/index.html', function (err, html) {
+    if (err) {
+      res.status(404).send(err)
+    } else {
+      res.end(html)
+    }
+  })
+});
+
 if (useDocumentation) {
   // Copy app locals to documentation app locals
   documentationApp.locals = app.locals
