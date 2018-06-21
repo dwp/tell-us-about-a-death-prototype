@@ -1,0 +1,117 @@
+<div class="tabs-panel" id="tab-1">
+  <div class="tabs-panel-inner">
+    <h2 class="js-hidden heading-medium">Caller</h2>
+    <h2 class="heading-medium">Caller’s details</h2>
+    <form method="post" autocomplete="off">
+      <div class="form-group">
+        <label class="form-label-bold" for="full-name-caller">Full name</label>
+        <input class="form-control" id="full-name-caller" name="full-name-caller" type="text">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="phone-number">
+          Phone number
+        </label>
+        <input class="form-control" id="phone-number" type="text" name="phone-number">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="leaflet-code">
+          Leaflet code
+          <span class="form-hint">This a 6 digit code &ndash; for example, ‘AB123C’.
+            <br>It’s on the leaflet, at the bottom.
+          </span>
+        </label>
+        <input class="form-control form-control-1-4" id="leaflet-code" name="leaflet-code" type="text" />
+      </div>
+      <div class="form-group">
+        <label class="form-label-bold" for="relationship">Relationship to deceased</label>
+        <input class="form-control" id="relationship" name="relationship" type="text">
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="nok">Is the caller the surviving spouse?</label>
+          <div class="multiple-choice" data-target="spouse-yes-panel">
+            <input id="spouse-yes" type="radio" name="radio-contact-group-1" value="Yes" data-type="spouse">
+            <label for="spouse-yes">Yes</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="spouse-yes-panel">
+            <div class="js-hide-field">
+              <label class="form-label" for="spouse-yes-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="spouse-yes-postcode" type="text" name="postcode">
+              <button class="button-secondary" href="#" role="button">Find address</button>
+            </div>
+            <label class="form-label" for="spouse-yes-phone-number">National Insurance number</label>
+            <input class="form-control" id="spouse-yes-phone-number" type="text" name="phone-number">
+          </div>
+
+          <div class="multiple-choice" data-target="nok-no-panel">
+            <input id="spouse-no" type="radio" name="radio-contact-group-1" value="No" data-type="spouse">
+            <label for="spouse-no">No</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="nok-no-panel">
+            <label class="form-label-bold" for="first-name-2">Who is the surviving spouse?</label>
+            <label class="form-label" for="full-name-spouse">Full name</label>
+            <input class="form-control" id="full-name-spouse" type="text" name="full-name">
+            <div>
+              <label class="form-label" for="spouse-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="spouse-no-postcode" type="text" name="postcode">
+              <button class="button-secondary" href="#" role="button">Find address</button>
+            </div>
+            <label class="form-label" for="spouse-no-phone-number">Phone number</label>
+            <input class="form-control" id="spouse-no-phone-number" type="text" name="phone-number">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="executor">Is the caller dealing with the estate?</label>
+
+          <div class="multiple-choice" data-target="executor-yes-panel">
+            <input id="executor-yes" type="radio" name="radio-contact-group-2" value="Yes" data-type="executor">
+            <label for="executor-yes">Yes</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden js-hide-field" id="executor-yes-panel">
+            <label class="form-label" for="executor-yes-postcode">Postcode</label>
+            <input class="form-control form-control-1-4" id="executor-yes-postcode" type="text" name="postcode">
+            <button class="button-secondary" href="#" role="button">Find address</button>
+          </div>
+
+          <div class="multiple-choice" data-target="executor-no">
+            <input id="executor" type="radio" name="radio-contact-group-2" value="No" data-type="executor">
+            <label for="executor">No</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="executor-no">
+            <label class="form-label-bold" for="executor">Executor’s details</label>
+            <label class="form-label" for="full-name-executor">Full name</label>
+            <input class="form-control" id="full-name-executor" type="text" name="full-name">
+            <div class="js-hide-field">
+              <label class="form-label" for="executor-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="executor-no-postcode" type="text" name="postcode">
+              <button class="button-secondary" href="#" role="button">Find address</button>
+            </div>
+            <label class="form-label" for="executor-no-phone-number">Phone number</label>
+            <input class="form-control" id="executor-no-phone-number" type="text" name="phone-number">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group js-hidden" id="caller-form">
+        <label class="form-label-bold" for="executor">
+          Address
+          <span class="form-hint">Ask the caller for their address so we can contact them if we need to.</span>
+        </label>
+        <label class="form-label" for="postcode">Postcode</label>
+        <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+        <button class="button-secondary" href="#" role="button">Find address</button>
+      </div>
+
+      <button id="continue-to-deceased" class="button">Continue</button>
+    </form>
+  </div>
+</div>
