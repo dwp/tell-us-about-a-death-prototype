@@ -1,4 +1,3 @@
-{% set topnav = true %}
 {% extends "layout-top-nav.html" %} {% set agent = true %} {% block page_title %} Tell us about a death {% endblock %} {% block content
   %} {% include "includes/blue-banner.html" %}
 
@@ -30,9 +29,9 @@
           </div>
 
           <div class="tabs-content">
-            {% include "protos/agent-facing-v10/includes/caller.html" %}
-            {% include "protos/agent-facing-v10/includes/deceased-trace.html" %}
-            {% include "protos/agent-facing-v10/includes/deceased-details.html" %}
+            {% include "protos/agent-facing-v11/includes/caller.html" %}
+            {% include "protos/agent-facing-v11/includes/deceased-trace.html" %}
+            {% include "protos/agent-facing-v11/includes/deceased-details.html" %}
           </div>
         </div>
       </div>

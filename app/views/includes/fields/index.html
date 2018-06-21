@@ -1,0 +1,18 @@
+{% extends "layout-top-nav.html" %}
+{% set agent = true %}
+{% block page_title %} Tell us about a death {% endblock %}
+{% block content%}
+  {% include "includes/blue-banner.html" %}
+  <main id="content" role="main">
+    <h1 class="heading-large">Edit {{fieldName}}</h1>
+    <form action="/protos/change-fields/2-check-answers">
+      <fieldset>
+        <legend class="visually-hidden">
+          Edit {{fieldName}}
+        </legend>
+        {% include "includes/fields/" + editableField + ".html" %}
+      </fieldset>
+      <button class="button">Save Field</button>
+    </form>
+  </main>
+{% endblock %}

@@ -41,7 +41,11 @@
         <form class="search-form" autocomplete="off">
           <div class="form-group search-group ">
             <input type="search" name="findNino" class="form-control form-control-search" id="search-box" autocomplete="off" value="" placeholder="N.I Number">
-            <a class="button-search" href="4-found-top-nav" role="button"><span class="visually-hidden">Search</span></a>
+            {% if topnav %}
+              <a class="button-search" href="4-found-top-nav" role="button"><span class="visually-hidden">Search</span></a>
+              {% else %}
+              <a class="button-search" href="4-found" role="button"><span class="visually-hidden">Search</span></a>
+            {% endif %}
           </div>
         </form>
       </nav>
