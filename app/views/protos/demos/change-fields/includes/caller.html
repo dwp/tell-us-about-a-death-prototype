@@ -1,0 +1,191 @@
+<div class="tabs-panel" id="tab-1">
+  <div class="tabs-panel-inner">
+    <h2 class="js-hidden heading-medium">Caller</h2>
+    <h2 class="heading-medium">Caller’s details</h2>
+    <form method="post" autocomplete="off">
+      {% set prefix = "caller" %}
+      {% include "includes/fields/full-name.html" %}
+      {% include "includes/fields/phone-number.html" %}
+
+      <div class="form-group">
+        <label class="form-label-bold" for="executor">
+          Address
+          <span class="form-hint">Ask the caller for their address so we can contact them if we need to.</span>
+        </label>
+        <label class="form-label" for="postcode">Postcode</label>
+        <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
+        <button class="button-secondary js-postcode-lookup" href="#" role="button">Find address</button>
+        <div class="panel panel-border-narrow form-group js-hidden pick-address">
+          <label class="form-label-bold" for="pick-address">
+            Select an address
+          </label>
+          <select class="form-control address-dropdown" id="pick-address">
+            <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+          </select>
+        </div>
+        <details>
+          <summary><span class="summary">Address not in the UK?</span></summary>
+          <div class="panel panel-border-narrow">
+            <div class="form-group">
+              <label class="form-label" for="caller-line-1">
+                Building and street <span class="visually-hidden">line 1 of 2</span>
+              </label>
+              <input class="form-control" id="caller-line-1" type="text" name="line-1">
+            </div>
+            <div class="form-group">
+              <label class="visually-hidden">Building and street line 2 of 2</label>
+              <input class="form-control" id="caller-building-street" type="text" name="building-street">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="caller-town-city">Town or city</label>
+              <input class="form-control" id="caller-town-city" type="text" name="town-city">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="caller-county">County</label>
+              <input class="form-control" id="caller-county" type="text" name="county">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="caller-postcode">Postcode</label>
+              <input class="form-control" id="caller-postcode" type="text" name="postcode">
+            </div>
+          </div>
+        </details>
+      </div>
+      {% include "includes/fields/leaflet-code.html" %}
+      {% include "includes/fields/relationship-to-deceased.html" %}
+
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="nok">Is the caller the surviving spouse?</label>
+          <div class="multiple-choice" data-target="spouse-yes-panel">
+            <input id="spouse-yes" type="radio" name="radio-contact-group-1" value="Yes" data-type="spouse">
+            <label for="spouse-yes">Yes</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="spouse-yes-panel">
+            <label class="form-label" for="spouse-yes-phone-number">National Insurance number</label>
+            <input class="form-control" id="spouse-yes-phone-number" type="text" name="phone-number">
+          </div>
+
+          <div class="multiple-choice" data-target="nok-no-panel">
+            <input id="spouse-no" type="radio" name="radio-contact-group-1" value="No" data-type="spouse">
+            <label for="spouse-no">No</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="nok-no-panel">
+            <label class="form-label-bold" for="first-name-2">Who is the surviving spouse?</label>
+            <label class="form-label" for="full-name-spouse">Full name</label>
+            <input class="form-control" id="full-name-spouse" type="text" name="full-name">
+            <label class="form-label" for="spouse-no-phone-number">Phone number</label>
+            <input class="form-control" id="spouse-no-phone-number" type="text" name="phone-number">
+            <div class="form-group">
+              <label class="form-label" for="spouse-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="spouse-no-postcode" type="text" name="postcode">
+              <button class="button-secondary js-postcode-lookup" href="#" role="button">Find address</button>
+              <div class="panel panel-border-narrow form-group js-hidden pick-address">
+                <label class="form-label-bold" for="spouse-pick-address">
+                  Select an address
+                </label>
+                <select class="form-control address-dropdown" id="spouse-pick-address">
+                  <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+                </select>
+              </div>
+              <details>
+                <summary><span class="summary">Address not in the UK?</span></summary>
+                <div class="panel panel-border-narrow">
+                  <div class="form-group">
+                    <label class="form-label" for="spouse-line-1">
+                      Building and street <span class="visually-hidden">line 1 of 2</span>
+                    </label>
+                    <input class="form-control" id="spouse-line-1" type="text" name="line-1">
+                  </div>
+                  <div class="form-group">
+                    <label class="visually-hidden">Building and street line 2 of 2</label>
+                    <input class="form-control" id="spouse-building-street" type="text" name="building-street">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="spouse-town-city">Town or city</label>
+                    <input class="form-control" id="spouse-town-city" type="text" name="town-city">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="spouse-county">County</label>
+                    <input class="form-control" id="spouse-county" type="text" name="county">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="spouse-postcode">Postcode</label>
+                    <input class="form-control" id="spouse-postcode" type="text" name="postcode">
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="executor">Is the caller dealing with the estate?</label>
+
+          <div class="multiple-choice" data-target="executor-yes-panel">
+            <input id="executor-yes" type="radio" name="radio-contact-group-2" value="Yes" data-type="executor">
+            <label for="executor-yes">Yes</label>
+          </div>
+
+          <div class="multiple-choice" data-target="executor-no">
+            <input id="executor" type="radio" name="radio-contact-group-2" value="No" data-type="executor">
+            <label for="executor">No</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="executor-no">
+            <label class="form-label-bold" for="executor">Executor’s details</label>
+            <label class="form-label" for="full-name-executor">Full name</label>
+            <input class="form-control" id="full-name-executor" type="text" name="full-name">
+            <label class="form-label" for="executor-no-phone-number">Phone number</label>
+            <input class="form-control" id="executor-no-phone-number" type="text" name="phone-number">
+            <div class="js-hide-field form-group">
+              <label class="form-label" for="executor-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="executor-no-postcode" type="text" name="postcode">
+              <button class="button-secondary js-postcode-lookup" href="#" role="button">Find address</button>
+              <div class="panel panel-border-narrow form-group js-hidden pick-address">
+                <label class="form-label-bold" for="executor-pick-address">
+                  Select an address
+                </label>
+                <select class="form-control address-dropdown" id="executor-pick-address">
+                  <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+                </select>
+              </div>
+              <details>
+                <summary><span class="summary">Address not in the UK?</span></summary>
+                <div class="panel panel-border-narrow">
+                  <div class="form-group">
+                    <label class="form-label" for="executor-line-1">
+                      Building and street <span class="visually-hidden">line 1 of 2</span>
+                    </label>
+                    <input class="form-control" id="executor-line-1" type="text" name="line-1">
+                  </div>
+                  <div class="form-group">
+                    <label class="visually-hidden">Building and street line 2 of 2</label>
+                    <input class="form-control" id="executor-building-street" type="text" name="building-street">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="executor-town-city">Town or city</label>
+                    <input class="form-control" id="executor-town-city" type="text" name="town-city">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="executor-county">County</label>
+                    <input class="form-control" id="executor-county" type="text" name="county">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="executor-postcode">Postcode</label>
+                    <input class="form-control" id="executor-postcode" type="text" name="postcode">
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <button id="continue-to-deceased" class="button">Continue</button>
+    </form>
+  </div>
+</div>

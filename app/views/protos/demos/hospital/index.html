@@ -1,0 +1,78 @@
+{% extends "layout-index.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+<div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="heading-xlarge">
+      {{serviceName}}
+      <span>Prototypes</span>
+    </h1>
+  </div>
+</div>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      {# Start of most recent box #}
+      <div class="most-recent">
+        {# Start of prototype write up #}
+        <div class="prototype-write-up">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Date of release</dt>
+                <dd>June 2018</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Version</dt>
+                <dd>Hospital autocomplete and admission date</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Related stories</dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+
+          <h3 class="heading-small">Overview</h3>
+          <p>Amends to the prototype for different variations of inputting hospital information.</p>
+          <h3 class="heading-small">Changes</h3>
+          <ul class="list list-bullet">
+            <li>Deceased's details tab - Added multiple variations relating to hospital admittance date:
+              <ol class="list list-number">
+                <li>Added hospital autocomplete</li>
+                <li>Removing any reference to admission date</li>
+                <li>Changed "how many days?" to be a date of admission</li>
+              </ol>
+            </li>
+          </ul>
+          <h3 class="heading-small">Hypotheses</h3>
+          <ul class="list list-bullet">
+            <li>To test whether a date of admission is easier to input and calculate than the amount of days.</li>
+          </ul>
+          <h3 class="heading-small">Research notes</h3>
+          <ul class="list list-bullet">
+            <li>Not yet tested</li>
+          </ul>
+          <h3 class="heading-small">Variations</h3>
+          <ul class="list list-bullet">
+            <li>
+              <a href="hospital/days">Amount of days since admission</a>
+            </li>
+            <li>
+              <a href="hospital/start-date">Admission date</a>
+            </li>
+            <li>
+              <a href="hospital/no-date">No date</a>
+            </li>
+          </ul>
+        </div>
+        {# End of prototype write up #}
+      </div>
+      {# End of most recent box #}
+    </div>
+  </div>
+</main>
+{% endblock %}

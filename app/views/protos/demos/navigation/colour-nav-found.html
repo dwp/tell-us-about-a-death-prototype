@@ -8,20 +8,23 @@ Tell us about a death
 
 {% block content %}
 
+<nav class="navigation-global">
+  <ul>
+    <li>
+      <a href="#" class="">New notification</a>
+    </li>
+    <li class="search-item">
+      <form autocomplete="off">
+        <div class="form-group search-group ">
+          <input type="search" name="findNino" class="form-control form-control-search" id="search-box" autocomplete="off" value="" placeholder="N.I Number">
+          <a class="button-search" href="4-found" role="button"><span class="visually-hidden">Search</span></a>
+        </div>
+      </form>
+    </li>
+  </ul>
+</nav>
 
 <main id="content" role="main">
-
-  <br>
-  <nav class="nav-bar2">
-    <ul>
-      <li>
-        <a href="1-start" class="">New notification</a>
-      </li>
-      <li>
-        <a href="#" class="active">Find notification</a>
-      </li>
-    </ul>
-  </nav>
 
   <div class="grid-row">
     <div class="column-two-thirds">
@@ -37,7 +40,7 @@ Tell us about a death
         </form>
         <h2 class="heading-medium">Results</h2>
         <ul class="search-results">
-            
+
             <li class="result">
               <a href="5-formatted" class="result-link">
                 Jane Smith
@@ -49,7 +52,7 @@ Tell us about a death
                 30 April 2018
               </span>
             </li>
-          
+
         </ul>
     </div>
   </div>
