@@ -1,0 +1,202 @@
+<div class="tabs-panel" id="tab-3">
+    <div class="tabs-panel-inner">
+      <h2 class="js-hidden heading-medium">
+        Deceased’s personal details
+      </h2>
+      <h2 class="heading-medium">Deceased’s personal details</h2>
+      <form method="post" autocomplete="off">
+        <div class="form-group">
+          <fieldset>
+            <legend>
+              <span class="form-label-bold">Date of death</span>
+            </legend>
+            <div class="form-date">
+              <div class="form-group form-group-day">
+                <label class="form-label" for="deceased-dob-day">Day</label>
+                <input class="form-control" id="deceased-dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-hint">
+              </div>
+              <div class="form-group form-group-month">
+                <label class="form-label" for="deceased-dob-month">Month</label>
+                <input class="form-control" id="deceased-dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+              </div>
+              <div class="form-group form-group-year">
+                <label class="form-label" for="deceased-dob-year">Year</label>
+                <input class="form-control" id="deceased-dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <fieldset>
+            <label class="form-label-bold" for="nok">Did they die in hospital?</label>
+            <div class="multiple-choice" data-target="hospital-yes-panel">
+              <input id="hospital-yes" type="radio" name="radio-contact-group-5" value="Yes">
+              <label for="hospital-yes">Yes</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="hospital-yes-panel">
+              <div class="form-group">
+                  <label for="location-picker">Which hospital?</label>
+                  {% include "includes/hospital-autocomplete.html" %}
+                </div>
+            </div>
+
+            <div class="multiple-choice" data-target="hospital-no-panel">
+              <input id="hospital-no" type="radio" name="radio-contact-group-5" value="No">
+              <label for="hospital-no">No</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="hospital-no-panel">
+              <label class="form-label-bold" for="hospital-no-postcode">Where did they die?</label>
+              <label class="form-label" for="hospital-no-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="hospital-no-postcode" type="text" name="postcode">
+              <button class="button-secondary js-postcode-lookup" role="button">Find address</button>
+              <div class="panel panel-border-narrow form-group js-hidden pick-address">
+                <label class="form-label-bold" for="hospital-no-pick-address">
+                  Select an address
+                </label>
+                <select class="form-control address-dropdown" id="hospital-no-pick-address">
+                  <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+                </select>
+              </div>
+              <details>
+                <summary><span class="summary">Address not in the UK?</span></summary>
+                <div class="panel panel-border-narrow">
+                  <div class="form-group">
+                    <label class="form-label" for="hospital-no-line-1">
+                      Building and street <span class="visually-hidden">line 1 of 2</span>
+                    </label>
+                    <input class="form-control" id="hospital-no-line-1" type="text" name="line-1">
+                  </div>
+                  <div class="form-group">
+                    <label class="visually-hidden">Building and street line 2 of 2</label>
+                    <input class="form-control" id="hospital-no-building-street" type="text" name="building-street">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="hospital-no-town-city">Town or city</label>
+                    <input class="form-control" id="hospital-no-town-city" type="text" name="town-city">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="hospital-no-county">County</label>
+                    <input class="form-control" id="hospital-no-county" type="text" name="county">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="hospital-no-manual-postcode">Postcode</label>
+                    <input class="form-control" id="hospital-no-manual-postcode" type="text" name="postcode">
+                  </div>
+                </div>
+              </details>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <fieldset>
+            <label class="form-label-bold" for="nok">Same address as caller?</label>
+            <div class="multiple-choice" data-target="same-address-yes-panel">
+              <input id="same-address-yes" type="radio" name="radio-contact-group-6" value="Yes">
+              <label for="same-address-yes">Yes</label>
+            </div>
+            <div class="multiple-choice" data-target="same-address-no-panel">
+              <input id="same-address-no" type="radio" name="radio-contact-group-6" value="No">
+              <label for="same-address-no">No</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="same-address-no-panel">
+              <label class="form-label" for="same-address-postcode">Postcode</label>
+              <input class="form-control form-control-1-4" id="same-address-postcode" type="text" name="postcode">
+              <button class="button-secondary js-postcode-lookup" role="button">Find address</button>
+              <div class="panel panel-border-narrow form-group js-hidden pick-address">
+                <label class="form-label-bold" for="not-caller-pick-address">
+                  Select an address
+                </label>
+                <select class="form-control address-dropdown" id="not-caller-pick-address">
+                  <option>Benton Park View, Newcastle upon Tyne, NE98 1YX</option>
+                </select>
+              </div>
+              <details>
+                <summary><span class="summary">Address not in the UK?</span></summary>
+                <div class="panel panel-border-narrow">
+                  <div class="form-group">
+                    <label class="form-label" for="not-caller-line-1">
+                      Building and street <span class="visually-hidden">line 1 of 2</span>
+                    </label>
+                    <input class="form-control" id="not-caller-line-1" type="text" name="line-1">
+                  </div>
+                  <div class="form-group">
+                    <label class="visually-hidden">Building and street line 2 of 2</label>
+                    <input class="form-control" id="not-caller-building-street" type="text" name="building-street">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="not-caller-town-city">Town or city</label>
+                    <input class="form-control" id="not-caller-town-city" type="text" name="town-city">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="not-caller-county">County</label>
+                    <input class="form-control" id="not-caller-county" type="text" name="county">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="not-caller-postcode">Postcode</label>
+                    <input class="form-control" id="not-caller-postcode" type="text" name="postcode">
+                  </div>
+                </div>
+              </details>
+            </div>
+          </fieldset>
+        </div>
+        <h2 class="heading-medium">Other information</h2>
+        <div class="form-group">
+          <fieldset>
+            <label class="form-label-bold" for="dvla">Did the deceased have a driving licence?</label>
+            <div class="multiple-choice" data-target="dvla-yes-panel">
+              <input id="dvla-yes" type="radio" name="radio-contact-group-8" value="Yes">
+              <label for="dvla-yes">Yes</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="dvla-yes-panel">
+              <label class="form-label" for="driving-licence-number">Driving licence number</label>
+              <input class="form-control" id="driving-licence-number" type="text" name="driving-licence-number">
+            </div>
+            <div class="multiple-choice" data-target="dvla-no-panel">
+              <input id="dvla-no" type="radio" name="radio-contact-group-8" value="No">
+              <label for="dvla-no">No</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-group">
+          <fieldset>
+            <label class="form-label-bold" for="vehicle-reg">
+              Did the deceased own any vehicles?
+              <span class="form-hint">If yes, please enter the vehicle registrations below.</span>
+            </label>
+            <div class="add-items js-template">
+              <div class="form-group">
+                <label class="form-label" for="vehicle-reg">Vehicle Registration</label>
+                <input class="form-control" type="text" id="vehicle-reg" />
+              </div>
+            </div>
+            <button type="button" class="button-secondary js-add-another-btn-table">Add Another</button>
+          </fieldset>
+          <table id="vehicle-registrations-table" class="js-hidden">
+            <caption class="heading-small">Vehicle Registrations</caption>
+            <tbody id="vehicle-reg-table">
+            </tbody>
+          </table>
+        </div>
+        <div class="form-group">
+          <fieldset>
+            <label class="form-label-bold" for="passport">Did the deceased have a passport?</label>
+            <div class="multiple-choice" data-target="passport-yes-panel">
+              <input id="passport-yes" type="radio" name="radio-contact-group-9" value="Yes">
+              <label for="passport-yes">Yes</label>
+            </div>
+            <div class="panel panel-border-narrow js-hidden" id="passport-yes-panel">
+              <label class="form-label" for="passport-number">Passport number</label>
+              <input class="form-control" id="passport-number" type="text" name="passport-number">
+            </div>
+            <div class="multiple-choice" data-target="passport-no-panel">
+              <input id="passport-no" type="radio" name="radio-contact-group-9" value="No">
+              <label for="passport-no">No</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <a class="button" href="2-check-answers" role="button">Check all information</a>
+      </form>
+    </div>
+  </div>
