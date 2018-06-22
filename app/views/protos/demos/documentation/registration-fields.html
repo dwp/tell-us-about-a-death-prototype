@@ -1,22 +1,16 @@
-{% extends "layout.html" %} {% set agent = true %} {% block page_title %} Tell us about a death {% endblock %} {% block content
-  %} {% include "includes/blue-banner.html" %}
+{% extends "layout-top-nav.html" %}
+{% set agent = true %}
 
+{% block page_title %}
+  Tell us about a death
+{% endblock %}
+
+{% block content %}
+  {% include "includes/blue-banner.html" %}
   <main id="content" role="main">
-    <br>
-    <nav class="nav-bar2">
-      <ul>
-        <li>
-          <a href="#" class="active">New notification</a>
-        </li>
-        <li>
-          <a href="3-find" class="">Find notification</a>
-        </li>
-      </ul>
-    </nav>
-
     <div class="grid-row">
       <div class="column-two-thirds">
-        <br>
+        <h1 class="heading-large">New Notification</h1>
         <!-- start Tabs -->
         <div class="tabs">
           <div class="tabs-nav">
@@ -40,14 +34,13 @@
           </div>
 
           <div class="tabs-content">
-            {% include "protos/agent-facing-v8/includes/caller-address.html" %}
-            {% include "protos/agent-facing-v8/includes/deceased-trace.html" %}
-            {% include "protos/agent-facing-v8/includes/deceased-details-table.html" %}
+            {% include "protos/demos/documentation/includes/caller-address.html" %}
+            {% include "protos/demos/documentation/includes/deceased-trace.html" %}
+            {% include "protos/demos/documentation/includes/deceased-details.html" %}
           </div>
         </div>
       </div>
       <!-- end Tabs -->
     </div>
   </main>
-
-  {% endblock %}
+{% endblock %}

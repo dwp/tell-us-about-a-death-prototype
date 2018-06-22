@@ -1,0 +1,79 @@
+{% extends "layout-index.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+<div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="heading-xlarge">
+      {{serviceName}}
+      <span>Prototypes</span>
+    </h1>
+  </div>
+</div>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      {# Start of most recent box #}
+      <div class="most-recent">
+        {# Start of prototype write up #}
+        <div class="prototype-write-up">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Date of release</dt>
+                <dd>June 2018</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Version</dt>
+                <dd>Documentation Numbers</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Related stories</dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+
+          <h3 class="heading-small">Overview</h3>
+          <p>Amends to the prototype for different variations of displaying documentation.</p>
+          <h3 class="heading-small">Changes</h3>
+          <ul class="list list-bullet">
+            <li>Deceased's details tab - Added multiple variations relating to documentation numbers, specifically:
+              <ol class="list list-number">
+                <li>Removing documentation</li>
+                <li>Adding vehicle registration numbers into a table</li>
+                <li>Adding vehicle registration numbers into multiple inputs</li>
+              </ol>
+            </li>
+          </ul>
+          <h3 class="heading-small">Hypotheses</h3>
+          <ul class="list list-bullet">
+            <li>To test whether or not the documentation is too much information to present to the agent, and to test in the event the documentation is no longer required.</li>
+            <li>For vehicle registration see if the two methods are easy to understand and which performs the best out of the two available options.</li>
+          </ul>
+          <h3 class="heading-small">Research notes</h3>
+          <ul class="list list-bullet">
+            <li>Not yet tested</li>
+          </ul>
+          <h3 class="heading-small">Variations</h3>
+          <ul class="list list-bullet">
+            <li>
+              <a href="registration-table">Vehicle Registration Table</a>
+            </li>
+            <li>
+              <a href="registration-fields">Vehicle Registration Input</a>
+            </li>
+            <li>
+              <a href="no-documentation">No passport, registration or licence documentation</a>
+            </li>
+          </ul>
+        </div>
+        {# End of prototype write up #}
+      </div>
+      {# End of most recent box #}
+    </div>
+  </div>
+</main>
+{% endblock %}
