@@ -1,0 +1,80 @@
+{% extends "layout-index.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+<div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="heading-xlarge">
+      {{serviceName}}
+      <span>Prototypes</span>
+    </h1>
+  </div>
+</div>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      {# Start of most recent box #}
+      <div class="most-recent">
+        {# Start of prototype write up #}
+        <div class="prototype-write-up">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Date of release</dt>
+                <dd>June 2018</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Version</dt>
+                <dd>Navigation variations</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Related stories</dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+
+          <h3 class="heading-small">Overview</h3>
+          <p>Amends to the prototype for different navigation patterns.</p>
+          <h3 class="heading-small">Changes</h3>
+          <ul class="list list-bullet">
+            <li>Added coloured navigation</li>
+            <li>Moved navigation into top bar as per GDS</li>
+            <li>Added a highlight style for search resuts</li>
+          </ul>
+          <h3 class="heading-small">Hypotheses</h3>
+          <ul class="list list-bullet">
+            <li>To test what pattern of navigation is most intuitive to use.</li>
+          </ul>
+          <h3 class="heading-small">Research notes</h3>
+          <ul class="list list-bullet">
+            <li>Not yet tested</li>
+          </ul>
+          <h3 class="heading-small">Variations</h3>
+          <ul class="list list-bullet">
+            <li>
+              <a href="navigation/colour-nav">Coloured Nav</a>
+            </li>
+            <li>
+              <a href="navigation/colour-nav-found">Coloured Nav Found page</a>
+            </li>
+            <li>
+              <a href="navigation/top-nav">Top Nav</a>
+            </li>
+            <li>
+              <a href="navigation/top-nav-found">Top Nav Found page</a>
+            </li>
+            <li>
+              <a href="navigation/top-nav-found-highlight">Top Nav Found page with highlight</a>
+            </li>
+          </ul>
+        </div>
+        {# End of prototype write up #}
+      </div>
+      {# End of most recent box #}
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends "layout-index.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% block content %}
+<div class="homepage-top">
+  <div class="homepage-top-content">
+    <h1 class="heading-xlarge">
+      {{serviceName}}
+      <span>Prototypes</span>
+    </h1>
+  </div>
+</div>
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      {# Start of most recent box #}
+      <div class="most-recent">
+        {# Start of prototype write up #}
+        <div class="prototype-write-up">
+          <div class="grid-row">
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Date of release</dt>
+                <dd>June 2018</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Version</dt>
+                <dd>Change fields</dd>
+              </dl>
+            </div>
+            <div class="column-one-third">
+              <dl>
+                <dt class="heading-small">Related stories</dt>
+                <dd></dd>
+              </dl>
+            </div>
+          </div>
+
+          <h3 class="heading-small">Overview</h3>
+          <p>Amends to the prototype to test editing one field at a time.</p>
+          <h3 class="heading-small">Changes</h3>
+          <ul class="list list-bullet">
+            <li>Added editing pages for individual fields</li>
+          </ul>
+          <h3 class="heading-small">Hypotheses</h3>
+          <ul class="list list-bullet">
+            <li>To test whether one page per field is an effective way of changing data.</li>
+          </ul>
+          <h3 class="heading-small">Research notes</h3>
+          <ul class="list list-bullet">
+            <li>Not yet tested</li>
+          </ul>
+          <h3 class="heading-small">Variations</h3>
+          <ul class="list list-bullet">
+            <li>
+              <a href="change-fields/check">Check and change one field</a>
+            </li>
+          </ul>
+        </div>
+        {# End of prototype write up #}
+      </div>
+      {# End of most recent box #}
+    </div>
+  </div>
+</main>
+{% endblock %}

@@ -1,0 +1,102 @@
+<div class="tabs-panel" id="tab-2">
+  <div class="tabs-panel-inner">
+    <h2 class="js-hidden heading-medium">
+      Deceased trace
+    </h2>
+    <h2 class="heading-medium">Deceased trace</h2>
+    <form method="post" autocomplete="off">
+      <div class="form-group">
+        <label class="form-label-bold" for="ni-number">
+          National Insurance number
+          <!--  <span class="form-hint">It's on your National Insurance card, benefit letter, payslip or P60.
+                <br>For example, ‘QQ 12 34 56 C’.
+                </span> -->
+        </label>
+        <input class="form-control" id="ni-number" type="text" name="ni-number">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label-bold" for="first-name-2">Full name</label>
+        <input class="form-control" id="first-name-2" name="first-name-2" type="text">
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <legend>
+            <span class="form-label-bold" id="dob-label">Date of birth</span>
+          </legend>
+          <div class="form-date">
+            <div class="form-group form-group-day">
+              <label class="form-label" for="dob-day">Day</label>
+              <input class="form-control" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" min="0" max="31" aria-describedby="dob-label">
+            </div>
+            <div class="form-group form-group-month">
+              <label class="form-label" for="dob-month">Month</label>
+              <input class="form-control" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+            </div>
+            <div class="form-group form-group-year">
+              <label class="form-label" for="dob-year">Year</label>
+              <input class="form-control" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" min="0" max="2016">
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="form-group js-hidden">
+        <label class="form-label-bold" for="marital-status">
+          Marital Status
+          <!-- <span class="form-hint">
+                    This has been auto-populated based on your previous answer.
+                  </span> -->
+        </label>
+        <input class="form-control" id="marital-status" name="marital-status" type="text">
+      </div>
+
+      <div class="form-group">
+        <fieldset>
+          <label class="form-label-bold" for="nok">Have you traced the deceased in Searchlight?</label>
+          <div class="multiple-choice" data-target="trace-yes-panel">
+            <input id="trace-yes" type="radio" name="radio-contact-group-5" value="Yes">
+            <label for="trace-yes">Yes</label>
+          </div>
+
+          <div class="panel panel-border-narrow js-hidden" id="trace-yes-panel">
+            <label class="form-label" for="phone-number">Further security questions</label>
+            <div class="multiple-choice">
+              <input id="security-1" name="" type="checkbox" value="security-1">
+              <label for="security-1">Deceased Person’s 1st Line of Address</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="security-2" name="" type="checkbox" value="security-2">
+              <label for="security-2">Deceased Person’s Post Code</label>
+            </div>
+            <div class="multiple-choice">
+              <input id="security-3" name="" type="checkbox" value="security-3">
+              <label for="security-3">Deceased Person’s Telephone number (landline or mobile is acceptable if both are recorded on system</label>
+            </div>
+            <!-- js-marital-status-choice is present so we can hide-->
+            <div class="multiple-choice js-marital-status-choice">
+              <input id="security-4" name="" type="checkbox" value="security-4">
+              <label for="security-4">Deceased Person’s marital status</label>
+            </div>
+
+          </div>
+
+          <div class="multiple-choice" data-target="trace-no-panel">
+            <input id="trace-no" type="radio" name="radio-contact-group-5" value="No">
+            <label for="trace-no">No</label>
+          </div>
+          <div class="panel panel-border-narrow js-hidden" id="trace-no-panel">
+            <label class="form-label-bold" for="first-name-2">Refer caller to Bereavement Support Team</label>
+            <span class="form-hint">Call 01234 567 890
+              <br> NB: DWP only &ndash; all OGDs will have to be contacted separately
+            </span>
+          </div>
+        </fieldset>
+      </div>
+
+      <button id="continue-to-other" class="button">Continue</button>
+    </form>
+  </div>
+</div>
