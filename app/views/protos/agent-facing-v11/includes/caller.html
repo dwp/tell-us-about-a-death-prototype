@@ -1,7 +1,7 @@
 <div class="tabs-panel" id="tab-1">
   <div class="tabs-panel-inner">
     <h2 class="js-hidden heading-medium">Caller</h2>
-    <h2 class="heading-medium">Caller’s details</h2>
+    <h2 class="heading-medium">About the caller</h2>
     <form method="post" autocomplete="off">
       {% set prefix = "caller" %}
       {% include "includes/fields/full-name.html" %}
@@ -10,7 +10,7 @@
       <div class="form-group">
         <label class="form-label-bold" for="executor">
           Address
-          <span class="form-hint">Ask the caller for their address so we can contact them if we need to.</span>
+          <span class="form-hint">We'll use this to contact the caller if we need to.</span>
         </label>
         <label class="form-label" for="postcode">Postcode</label>
         <input class="form-control form-control-1-4" id="postcode" type="text" name="postcode">
@@ -24,7 +24,7 @@
           </select>
         </div>
         <details>
-          <summary><span class="summary">Address not in the UK?</span></summary>
+          <summary><span class="summary">Address outside the UK?</span></summary>
           <div class="panel panel-border-narrow">
             <div class="form-group">
               <label class="form-label" for="caller-line-1">
@@ -56,7 +56,7 @@
 
       <div class="form-group">
         <fieldset>
-          <label class="form-label-bold" for="nok">Is the caller the surviving spouse?</label>
+          <label class="form-label-bold" for="nok">Were they married to or in a civil partnership with the person who died?</label>
           <div class="multiple-choice" data-target="spouse-yes-panel">
             <input id="spouse-yes" type="radio" name="radio-contact-group-1" value="Yes" data-type="spouse">
             <label for="spouse-yes">Yes</label>
@@ -72,7 +72,7 @@
             <label for="spouse-no">No</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="nok-no-panel">
-            <label class="form-label-bold" for="first-name-2">Who is the surviving spouse?</label>
+            <label class="form-label-bold" for="first-name-2">Husband, wife or civil partner's details</label>
             <label class="form-label" for="full-name-spouse">Full name</label>
             <input class="form-control" id="full-name-spouse" type="text" name="full-name">
             <label class="form-label" for="spouse-no-phone-number">Phone number</label>
@@ -90,7 +90,7 @@
                 </select>
               </div>
               <details>
-                <summary><span class="summary">Address not in the UK?</span></summary>
+                <summary><span class="summary">Address outside the UK?</span></summary>
                 <div class="panel panel-border-narrow">
                   <div class="form-group">
                     <label class="form-label" for="spouse-line-1">
@@ -154,7 +154,7 @@
                 </select>
               </div>
               <details>
-                <summary><span class="summary">Address not in the UK?</span></summary>
+                <summary><span class="summary">Address outside the UK?</span></summary>
                 <div class="panel panel-border-narrow">
                   <div class="form-group">
                     <label class="form-label" for="executor-line-1">

@@ -1,9 +1,9 @@
 <div class="tabs-panel" id="tab-2">
   <div class="tabs-panel-inner">
     <h2 class="js-hidden heading-medium">
-      Deceased trace
+      Verify the person who died
     </h2>
-    <h2 class="heading-medium">Deceased trace</h2>
+    <h2 class="heading-medium">Verify the person who died</h2>
     <form method="post" autocomplete="off">
       <div class="form-group">
         <label class="form-label-bold" for="ni-number">
@@ -54,31 +54,31 @@
 
       <div class="form-group">
         <fieldset>
-          <label class="form-label-bold" for="nok">Have you traced the deceased in Searchlight?</label>
+          <label class="form-label-bold" for="nok">Is there a record of the person in Searchlight?</label>
           <div class="multiple-choice" data-target="trace-yes-panel">
             <input id="trace-yes" type="radio" name="radio-contact-group-5" value="Yes">
             <label for="trace-yes">Yes</label>
           </div>
 
           <div class="panel panel-border-narrow js-hidden" id="trace-yes-panel">
-            <label class="form-label" for="phone-number">Further security questions</label>
+            <label class="form-label" for="phone-number">Check Searchlight for the answers to these questions:</label>
             <div class="multiple-choice">
               <input id="security-1" name="" type="checkbox" value="security-1">
-              <label for="security-1">Deceased Person’s 1st Line of Address</label>
+              <label for="security-1">What was the first line of their address?</label>
             </div>
 
             <div class="multiple-choice">
               <input id="security-2" name="" type="checkbox" value="security-2">
-              <label for="security-2">Deceased Person’s Post Code</label>
+              <label for="security-2">What was their postcode?</label>
             </div>
             <div class="multiple-choice">
               <input id="security-3" name="" type="checkbox" value="security-3">
-              <label for="security-3">Deceased Person’s Telephone number (landline or mobile is acceptable if both are recorded on system</label>
+              <label for="security-3">What was their telephone or mobile number?</label>
             </div>
             <!-- js-marital-status-choice is present so we can hide-->
             <div class="multiple-choice js-marital-status-choice">
               <input id="security-4" name="" type="checkbox" value="security-4">
-              <label for="security-4">Deceased Person’s marital status</label>
+              <label for="security-4">What was their marital status?</label>
             </div>
 
           </div>
@@ -88,9 +88,18 @@
             <label for="trace-no">No</label>
           </div>
           <div class="panel panel-border-narrow js-hidden" id="trace-no-panel">
-            <label class="form-label-bold" for="first-name-2">Refer caller to Bereavement Support Team</label>
-            <span class="form-hint">Call 01234 567 890
-              <br> NB: DWP only &ndash; all OGDs will have to be contacted separately
+            <label class="form-label-bold" for="first-name-2">Caller should contact Bereavement Service</label>
+            <span class="form-hint"><div class="contact">
+              Telephone: 0800 731 0469<br>
+              Welsh language: 0800 731 0453</p>
+
+              <p>Textphone: 0800 731 0464  <br>
+              Welsh language: 0800 731 0456</p>
+
+              <p>Monday to Friday, 8am to 6pm<br>
+
+</div>
+              <br>Bereavement Service only deals with DWP benefits and services. All other organisations should be contacted separately.
             </span>
           </div>
         </fieldset>
